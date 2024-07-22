@@ -12,9 +12,70 @@ The CNN model was designed to accurately recognize handwritten Devanagari charac
 
 ![Model Architecture](/assets/model_architecture.png)
 
-### Code Snippets
+### Model Code With Detailed Comments
 
-[Include Explained Code Snippets Here]
+``` python
+# Enhanced Model Architecture
+model = Sequential()
+
+# Starting with a Conv2D layer with 64 filters for initial feature extraction from the input image
+model.add(Conv2D(64, (3,3), padding='same', input_shape=(32, 32, 1), activation='relu'))
+# Normalizing the output of the previous layer to speed up training and improve model stability
+model.add(BatchNormalization())
+# Adding another Conv2D layer with 64 filters to extract more complex features
+model.add(Conv2D(64, (3,3), padding='same', activation='relu'))
+# Normalizing the output of the previous Conv2D layer
+model.add(BatchNormalization())
+# Applying MaxPooling2D to reduce spatial dimensions and condense the most important features
+model.add(MaxPooling2D(pool_size=(2,2)))
+
+# Increasing the depth with 128 filters to capture finer details in the images
+model.add(Conv2D(128, (3,3), padding='same', activation='relu'))
+# BatchNormalization to maintain the mean output close to 0 and the standard deviation close to 1
+model.add(BatchNormalization())
+# Reducing the dimensions further to ensure the model focuses on the most critical features
+model.add(MaxPooling2D(pool_size=(2,2)))
+
+# Further increasing the depth with 256 filters for high-level feature extraction
+model.add(Conv2D(256, (3,3), padding='same', activation='relu'))
+# Normalizing the features from the previous Conv2D layer
+model.add(BatchNormalization())
+# Another MaxPooling2D to reduce dimensions and prepare the data for the Dense layers
+model.add(MaxPooling2D(pool_size=(2,2)))
+
+# Adding more complexity with a high number of filters to learn the most abstract representations
+model.add(Conv2D(512, (3,3), padding='same', activation='relu'))
+# Double BatchNormalization potentially by mistake, usually a single one is sufficient after a Conv2D
+model.add(BatchNormalization())
+model.add(BatchNormalization())  # This line might be redundant and can be removed.
+# Final MaxPooling2D to reduce the feature map to its smallest spatial dimensions
+model.add(MaxPooling2D(pool_size=(2,2)))
+
+# Flattening the 3D output to a 1D vector to serve as input to the Dense layer
+model.add(Flatten())
+# A Dense layer with 512 units to interpret the features extracted by Conv2D layers
+model.add(Dense(512, activation='relu', kernel_regularizer='l2'))  # Regularization to prevent overfitting
+# Dropout layer to ignore randomly selected neurons during training to prevent overfitting
+model.add(Dropout(0.5))
+# The final Dense layer with 46 units and softmax activation for multi-class classification
+model.add(Dense(46, activation='softmax'))
+
+# Displaying the model's architecture summary
+model.summary()
+
+# Compile the model with Adam optimizer and categorical crossentropy for multi-class classification
+optimizer = Adam(lr=0.001)
+model.compile(loss='categorical_crossentropy', optimizer=optimizer, metrics=['accuracy'])
+
+# Training the model using data augmentation to improve generalization
+history = model.fit(
+    datagen.flow(re_x_train, y_train, batch_size=32),
+    validation_data=(re_x_test, y_test),
+    epochs=150,  # Extended training period for better learning
+    verbose=2,
+    callbacks=[lr_scheduler, lr_plateau_callback]  # Callbacks for dynamic learning rate adjustments
+)
+```
 
 ### Challenges and Solutions
 
