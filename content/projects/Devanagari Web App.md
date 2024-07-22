@@ -1,3 +1,5 @@
+This project demonstrates a comprehensive approach to developing a CNN for handwritten Devanagari character recognition. I built this model based on AlexNet and the heavily used research paper ["ImageNet Classification with Deep Convolutional Neural Networks" by Krizhevsky, Sutskever, and Hinton (2012)](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf), google (of course), and the dreaded ChatGPT. By employing advanced data augmentation, dropout layers, and rigorous testing and analysis, the model was optimized to achieve high accuracy and robustness.
+
 ## Technical Implementation
 
 ### Convolutional Neural Network (CNN) Architecture
@@ -108,12 +110,6 @@ To understand and address the overfitting issue, a detailed analysis of the mode
 3. **Evaluation Metrics**: Accuracy and loss were monitored throughout the training process. Step times were printed to keep track of the computational efficiency.
 
 [Include Graphs and Statistical Analysis Here]
-
-## Conclusion
-
-This project showcases a comprehensive approach to developing a CNN for handwritten Devanagari character recognition. By employing advanced data augmentation, dropout layers, and rigorous testing and analysis, the model was optimized to achieve high accuracy and robustness. The integration into a web-based interface further demonstrates the practical application of this technology in real-time language recognition.
-
-Through this detailed implementation, the project highlights critical aspects of deep learning, including model architecture, overfitting mitigation, and performance evaluation, providing valuable insights into developing and refining neural networks for complex tasks.
 
 ### Libraries Used
 - Python
