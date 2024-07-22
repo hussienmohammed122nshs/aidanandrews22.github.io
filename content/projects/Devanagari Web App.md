@@ -1,16 +1,4 @@
-# Devanagari Language Learning Web App
-
 ## Technical Implementation
-
-### Technologies Used
-- Python
-- Flask
-- TensorFlow
-- Keras
-- scikit-learn
-- Pandas
-- NumPy
-- Matplotlib
 
 ### Convolutional Neural Network (CNN) Architecture
 
@@ -65,3 +53,13 @@ To understand and address the overfitting issue, a detailed analysis of the mode
 This project showcases a comprehensive approach to developing a CNN for handwritten Devanagari character recognition. By employing advanced data augmentation, dropout layers, and rigorous testing and analysis, the model was optimized to achieve high accuracy and robustness. The integration into a web-based interface further demonstrates the practical application of this technology in real-time language recognition.
 
 Through this detailed implementation, the project highlights critical aspects of deep learning, including model architecture, overfitting mitigation, and performance evaluation, providing valuable insights into developing and refining neural networks for complex tasks.
+
+### Libraries Used
+- Python
+- Flask
+- TensorFlow
+- Keras
+- scikit-learn
+- Pandas
+- NumPy
+- Matplotlib
