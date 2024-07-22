@@ -109,7 +109,7 @@ To understand and address the overfitting issue, a detailed analysis of the mode
    
 3. **Evaluation Metrics**: Accuracy and loss were monitored throughout the training process. Step times were printed to keep track of the computational efficiency.
 
-[Include Graphs and Statistical Analysis Here]
+![Graphs and Statistical Analysis](/assets/dp_testing.png)
 
 ### Libraries Used
 - Python
