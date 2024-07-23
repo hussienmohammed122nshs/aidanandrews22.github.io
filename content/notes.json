@@ -124,5 +124,11 @@
     "title": "July 22",
     "category": "Personal",
     "date": "2024-07-22"
+  },
+  {
+    "id": "note1721764573649",
+    "title": "Implementing User Tags for Wavular RAG",
+    "category": "Work",
+    "date": "2024-07-23"
   }
 ]
