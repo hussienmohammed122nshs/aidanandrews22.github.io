@@ -17,7 +17,6 @@ The CNN model was designed to accurately recognize handwritten Devanagari charac
 ### Model Code With Detailed Comments
 
 ```python
-# Enhanced Model Architecture
 model = Sequential()
 
 # Starting with a Conv2D layer with 64 filters for initial feature extraction from the input image
