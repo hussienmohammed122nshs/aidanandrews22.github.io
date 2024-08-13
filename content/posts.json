@@ -14,13 +14,5 @@
     "category": "Misc",
     "summary": "I would have never thought that I would take pride in a paper written for a general education requirement class...",
     "content": "content/posts/misc040424.md"
-  },
-  {
-    "id": "ml130824",
-    "title": "Optimizing Natural Language Processing Systems: Advanced RAG and Intent Classification",
-    "date": "2024-08-13",
-    "category": "ML",
-    "summary": "This paper presents cutting-edge techniques for enhancing Natural Language Processing (NLP) systems, focusing on two critical areas: Retrieval-Augmented Generation (RAG) and intent classification. We introduce a novel \"wavular\" RAG approach that significantly improves retrieval efficiency, and a hybrid embedding-based classification system optimized for limited datasets. Our methods demonstrate substantial improvements in computational efficiency and classification accuracy, addressing key challenges in modern NLP applications. This research is particularly relevant for scenarios with constrained computational resources or limited training data, offering innovative solutions to enhance NLP system performance across various domains. Keywords: Natural Language Processing, Retrieval-Augmented Generation, Intent Classification, Semantic Search, Embedding-Based Classification",
-    "content": "content/posts/ml130824.md"
   }
 ]
