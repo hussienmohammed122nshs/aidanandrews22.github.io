@@ -1,19 +1,19 @@
 [
   {
-    "id": "voxai",
-    "title": "VoxAI",
-    "description": "An autonomous learning assistant designed to streamline and enhance the educational experience through AI-driven interactions and adaptive learning technologies.",
-    "demoLink": "https://www.youtube.com/watch?v=L_BydgDq2Mw&feature=youtu.be",
-    "githubLink": "https://github.com/aidanandrews22/VoxAI",
-    "tags": ["AI & Machine Learning", "Completed"]
-  },
-  {
     "id": "devanagari-web-app",
     "title": "Devanagari Web App",
     "description": "A web-based application focused on teaching the Devanagari script through interactive lessons and quizzes, leveraging cutting-edge web technologies for an immersive learning experience.",
     "demoLink": "https://www.youtube.com/watch?v=IahiTsLGGUA",
     "githubLink": "https://github.com/aidanandrews22/Devanagari-Recognition",
     "tags": ["Python", "Deep Learning", "Completed"]
+  },
+  {
+    "id": "voxai",
+    "title": "VoxAI",
+    "description": "An autonomous learning assistant designed to streamline and enhance the educational experience through AI-driven interactions and adaptive learning technologies.",
+    "demoLink": "https://www.youtube.com/watch?v=L_BydgDq2Mw&feature=youtu.be",
+    "githubLink": "https://github.com/aidanandrews22/VoxAI",
+    "tags": ["AI & Machine Learning", "Completed"]
   },
   {
     "id": "climatepredict",
