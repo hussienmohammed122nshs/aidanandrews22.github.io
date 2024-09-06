@@ -7,17 +7,17 @@
 
 **Transcripts:**
 
-- **[Official Transcript](https://aidanandrews22.github.io/content/docs/Aidan_Andrews_Official_Transcript.pdf)**  
+- **[Official Transcript](https://aidanandrews22.github.io/content/pdf/Aidan_Andrews_Official_Transcript.pdf)**  
   _Last updated: 2024-08-13_
 
-- **[Unofficial Transcript](https://aidanandrews22.github.io/content/docs/Aidan_Andrews_Unofficial_Transcript.pdf)**  
+- **[Unofficial Transcript](https://aidanandrews22.github.io/content/pdf/Aidan_Andrews_Unofficial_Transcript.pdf)**  
   _Last updated: 2024-08-13_
 
 **Professional:**
 
-- **[Resume](https://aidanandrews22.github.io/content/docs/Aidan_Andrews_Resume.pdf)**  
+- **[Resume](https://aidanandrews22.github.io/content/pdf/Aidan_Andrews_Resume.pdf)**  
   _Last updated: 2024-01-15_
 
-- **[Cover Letter](https://aidanandrews22.github.io/content/docs/cover-letter.pdf)**  
+- **[Cover Letter](https://aidanandrews22.github.io/content/pdf/cover-letter.pdf)**  
   _Last updated: 2024-01-20_
 
