@@ -16,7 +16,7 @@
 **Professional:**
 
 - **[Resume](https://aidanandrews22.github.io/content/pdf/Aidan_Andrews_Resume.pdf)**  
-  _Last updated: 2024-01-15_
+  _Last updated: 2024-10-07_
 
 - **[Cover Letter](https://aidanandrews22.github.io/content/pdf/cover-letter.pdf)**  
   _Last updated: 2024-01-20_
