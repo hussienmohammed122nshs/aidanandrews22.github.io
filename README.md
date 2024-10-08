@@ -19,5 +19,5 @@
   _Last updated: 2024-10-07_
 
 - **[Cover Letter](https://aidanandrews22.github.io/content/pdf/cover-letter.pdf)**  
-  _Last updated: 2024-01-20_
+  _Last updated: 2024-10-08_
 
