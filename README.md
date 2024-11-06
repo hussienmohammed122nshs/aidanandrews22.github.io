@@ -8,10 +8,10 @@
 **Transcripts:**
 
 - **[Official Transcript](https://aidanandrews22.github.io/content/pdf/Aidan_Andrews_Official_Transcript.pdf)**  
-  _Last updated: 2024-08-13_
+  _Last updated: 2024-11-06_
 
 - **[Unofficial Transcript](https://aidanandrews22.github.io/content/pdf/Aidan_Andrews_Unofficial_Transcript.pdf)**  
-  _Last updated: 2024-08-13_
+  _Last updated: 2024-11-06_
 
 **Professional:**
 
