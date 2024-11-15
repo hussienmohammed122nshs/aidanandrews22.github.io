@@ -8,20 +8,28 @@
     "tags": ["Python", "Deep Learning", "Completed"]
   },
   {
-    "id": "voxai",
-    "title": "VoxAI",
-    "description": "An autonomous learning assistant designed to streamline and enhance the educational experience through AI-driven interactions and adaptive learning technologies.",
-    "demoLink": "https://www.youtube.com/watch?v=L_BydgDq2Mw&feature=youtu.be",
-    "githubLink": "https://github.com/aidanandrews22/VoxAI",
-    "tags": ["AI & Machine Learning", "Completed"]
-  },
-  {
     "id": "climatepredict",
     "title": "ClimatePredict",
     "description": "Completed a multi regression model in Rust. The project comprises 3 regression models: linear regression, polynomial regression, and random forest regression (incomplete). I was solely responsible for all machine learning implemented in this project.",
     "demoLink": "https://youtu.be/JlD5GDwLOfI?si=NAy5T-9PecZMSqm-",
     "githubLink": "https://github.com/aidanandrews22/CS182H-Project",
     "tags": ["Rust", "Machine Learning", "Completed"]
+  },
+  {
+    "id": "classwize",
+    "title": "ClassWize: Student Course Scheduler",
+    "description": "Designed and implemented a student course scheduler leveraging data scraped from UIUC databases, encompassing all course and degree requirements. Developed unique data structures and advanced algorithms to generate optimized course plans, factoring in prerequisites, co-requisites, difficulty, user preferences, and remaining semesters. Integrated transformer-based LLMs and RAG techniques to provide intelligent class suggestions, enhancing user experience with an efficient, user-centric approach.",
+    "demoLink": "https://aidanandrews.info/",
+    "githubLink": "https://github.com/aidanandrews22/",
+    "tags": ["LLM's, Web Dev", "In Progress"]
+  },
+  {
+    "id": "voxai",
+    "title": "VoxAI",
+    "description": "An autonomous learning assistant designed to streamline and enhance the educational experience through AI-driven interactions and adaptive learning technologies.",
+    "demoLink": "https://www.youtube.com/watch?v=L_BydgDq2Mw&feature=youtu.be",
+    "githubLink": "https://github.com/aidanandrews22/VoxAI",
+    "tags": ["AI & Machine Learning", "Completed"]
   },
   {
     "id": "old-website",
