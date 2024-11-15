@@ -133,7 +133,7 @@ loop {
 
 #### Visualizations
 
-![Global Temperature Graph](/assets/Global Temperature.png)
+![Global Temperature Graph]('/assets/Global Temperature.png')
 
 1. **Linear Regression Fit**
    - A scatter plot of the data points with the regression line overlay.
