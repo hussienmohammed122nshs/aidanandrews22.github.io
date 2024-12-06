@@ -136,7 +136,7 @@ loop {
 ![Global Temperature](/assets/Global_Temperature.png)
 
 1. **Linear Regression Fit**
-   - A scatter plot of the data points with the regression line overlay.
+   ![Linear Regression](/assets/linear_regression.png)
    
 2. **Polynomial Regression Curve**
    - Visualization of the polynomial fit for nonlinear relationships.
