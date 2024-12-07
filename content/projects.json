@@ -1,5 +1,13 @@
 [
   {
+    "id": "class",
+    "title": "ClassWize: AI Powered Class Planner"",
+    "description": "The app allows students to create course maps, track graduation readiness, and meet nuanced academic requirements using a rule-enforcing scheduler. Users can see their status on every single degree requirement to determine graduation readiness. Personalized course recommendations via an LLM, reorganizes plans to resolve unmet requirements, and prevents invalid scheduling (e.g., prerequisite violations, time conflicts, restrictions). The app integrates institutional course data, displays insights like average GPA, and supports exporting schedules (google sheets) to share with advisors.",
+    "demoLink": "https://www.youtube.com/watch?v=IahiTsLGGUA",
+    "githubLink": "https://github.com/aidanandrews22/Devanagari-Recognition",
+    "tags": ["React", "Machine Learning", "Algorithms & Data Structures"]
+  },
+  {
     "id": "devanagari-web-app",
     "title": "Devanagari Web App",
     "description": "A web-based application focused on teaching the Devanagari script through interactive lessons and quizzes, leveraging cutting-edge web technologies for an immersive learning experience.",
