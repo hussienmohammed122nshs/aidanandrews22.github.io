@@ -1,6 +1,6 @@
 **Note:** This project will be open-sourced once the first MVP is complete.
 
-# Motivation
+## Motivation
 The primary motivation is to streamline the degree planning process. Students often face complexity when ensuring they meet all institutional requirements and prerequisites, aligning courses with their personal interests, and maintaining a legal schedule (no prerequisite violations, no duplicates, no courses placed in unavailable semesters). This project addresses these challenges by providing automated checks, intelligent recommendations, and a visual map to reduce the overhead and confusion often associated with manual academic planning.
 
 ---
