@@ -32,14 +32,6 @@
     "tags": ["Rust", "Machine Learning", "Completed"]
   },
   {
-    "id": "classwize",
-    "title": "ClassWize: Student Course Scheduler",
-    "description": "Designed and implemented a student course scheduler leveraging data scraped from UIUC databases, encompassing all course and degree requirements. Developed unique data structures and advanced algorithms to generate optimized course plans, factoring in prerequisites, co-requisites, difficulty, user preferences, and remaining semesters. Integrated transformer-based LLMs and RAG techniques to provide intelligent class suggestions, enhancing user experience with an efficient, user-centric approach.",
-    "demoLink": "https://aidanandrews.info/",
-    "githubLink": "https://github.com/aidanandrews22/",
-    "tags": ["LLM's, Web Dev", "In Progress"]
-  },
-  {
     "id": "voxai",
     "title": "VoxAI",
     "description": "An autonomous learning assistant designed to streamline and enhance the educational experience through AI-driven interactions and adaptive learning technologies.",
