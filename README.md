@@ -8,15 +8,15 @@
 **Transcripts:**
 
 - **[Official Transcript](https://aidanandrews22.github.io/content/pdf/Aidan_Andrews_Official_Transcript.pdf)**  
-  _Last updated: 2024-11-06_
+  _Last updated: 2024-12-25_
 
 - **[Unofficial Transcript](https://aidanandrews22.github.io/content/pdf/Aidan_Andrews_Unofficial_Transcript.pdf)**  
-  _Last updated: 2024-11-06_
+  _Last updated: 2025-01-06_
 
 **Professional:**
 
 - **[Resume](https://aidanandrews22.github.io/content/pdf/Aidan_Andrews_Resume.pdf)**  
-  _Last updated: 2024-10-07_
+  _Last updated: 2025-01-06_
 
 - **[Cover Letter](https://aidanandrews22.github.io/content/pdf/cover-letter.pdf)**  
   _Last updated: 2024-10-08_
