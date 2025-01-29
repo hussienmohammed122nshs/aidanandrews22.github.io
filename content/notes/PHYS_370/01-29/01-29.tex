@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, bm}
+\usepackage{braket}
+
+\begin{document}
+
+\section{Matrix Representation of Quantum Gates}
+In quantum computing, the state of an \(n\)-qubit system is represented by a \(2^n\)-dimensional vector. Quantum gates are represented by \(2^n \times 2^n\) unitary matrices. A six-qubit quantum gate must be represented by a \(64 \times 64\) unitary matrix. The unitary condition:
+\[
+U^{\dagger}U = U U^{\dagger} = I,
+\]
+where \(U^{\dagger}\) is the Hermitian conjugate (conjugate transpose) of \(U\).
+
+\section{Pauli Matrices as Quantum Gates}
+The Pauli matrices (\(X, Y, Z\)) are fundamental single-qubit gates:
+\begin{align*}
+X & = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \quad \text{(Bit-flip gate)} \\
+Y & = \begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix} \quad \text{(Bit \& Phase-flip)} \\
+Z & = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \quad \text{(Phase-flip gate)}
+\end{align*}`'
+These matrices are unitary (\(U^{\dagger} = U^{-1}\)) and Hermitian (\(U = U^{\dagger}\)), ensuring valid quantum operations.
+
+\section{Controlled-NOT (CNOT) Gate}
+The CNOT gate acts on two qubits, with one acting as a control and the other as a target. It performs a NOT operation on the target if and only if the control qubit is \(|1\rangle\). The matrix representation:
+\[
+\text{CNOT} = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{bmatrix}
+\]
+Using Dirac notation, its action is:
+\begin{align*}
+|00\rangle &\to |00\rangle \\
+|01\rangle &\to |01\rangle \\
+|10\rangle &\to |11\rangle \quad \text{(flips target qubit)} \\
+|11\rangle &\to |10\rangle
+\end{align*}
+The CNOT gate can be used to create Bell states when combined with the Hadamard gate.
+
+\section{Hadamard Gate and Bell State Generation}
+The Hadamard gate (\(H\)) puts a qubit into an equal superposition:
+\[
+H = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+\]
+Used to create Bell states in combination with CNOT. Example Bell state:
+\[
+|\beta_{00}\rangle = \frac{|00\rangle + |11\rangle}{\sqrt{2}}
+\]
+The circuit consists of:
+\begin{itemize}
+    \item Applying \(H\) to the first qubit.
+    \item Applying CNOT, with the first qubit as the control.
+\end{itemize}
+
+\section{Quantum Circuit Representation}
+\begin{itemize}
+    \item Wires represent qubits and their evolution through time, not physical movement.
+    \item Single-qubit gates (\(X, H, Z\), etc.) act on one qubit.
+    \item Multi-qubit gates (CNOT, Toffoli) involve entanglement.
+    \item Measurement collapses the quantum state and is usually represented by an encircled \(M\) in diagrams.
+\end{itemize}
+
+\section{Controlled Gates and Universal Quantum Gates}
+Controlled gates allow conditional operations:
+\begin{itemize}
+    \item Controlled-Z (CZ): Applies a \(Z\) gate to the target when control is \(|1\rangle\).
+    \item Controlled-Hadamard (CH): Applies \(H\) to the target when control is \(|1\rangle\).
+    \item Toffoli Gate (CCNOT): Uses two control qubits and one target, flipping the target only when both controls are \(|1\rangle\).
+    \item Fredkin Gate (CSWAP): Swaps two qubits based on a control qubit.
+\end{itemize}
+
+\section{Gate Decomposition}
+Complex multi-qubit gates can be decomposed into single-qubit gates and CNOTs. Example: Controlled-\(U\) decomposition replaces a controlled-\(U\) gate with a sequence of CNOTs and single-qubit rotations, used for efficient quantum circuit optimization.
+
+\section{No-Cloning Theorem and Quantum Cloning}
+The CNOT gate cannot clone an arbitrary quantum state due to the no-cloning theorem. Example: Trying to copy \(\alpha|0\rangle + \beta|1\rangle\) results in entanglement, not an identical copy. Some specific states, like \(|0\rangle\) or \(|1\rangle\), can be cloned, but arbitrary superpositions cannot.
+
+\section{Key Takeaways for Class Questions}
+\begin{itemize}
+    \item What size matrix represents an \(n\)-qubit gate? \(2^n \times 2^n\) unitary matrix.
+    \item Why are Pauli matrices quantum gates? They are unitary and Hermitian.
+    \item What is the role of CNOT? Flips the target qubit if the control is \(|1\rangle\).
+    \item How does Hadamard create superposition? Equal probability of \(|0\rangle\) and \(|1\rangle\).
+    \item What do wires in a circuit mean? Time evolution of a quantum state.
+    \item Can quantum states be cloned? No, due to the no-cloning theorem.
+\end{itemize}
+
+\end{document}
