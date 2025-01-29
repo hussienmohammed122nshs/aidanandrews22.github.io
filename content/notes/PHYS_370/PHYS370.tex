@@ -2,7 +2,24 @@
 \usepackage{amsmath, amssymb, bm}
 \usepackage{braket}
 
+% Add packages for better chapter handling and TOC
+\usepackage{titlesec}
+\usepackage{tocloft}
+
+\title{Quantum Computing Fundamentals}
+\author{PHYS 370}
+\date{Spring 2025}
+
 \begin{document}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section*{Chapter 1: Quantum Gates and Circuits}
+\addcontentsline{toc}{section}{Chapter 1: Quantum Gates and Circuits}
+\subsection*{Lecture 3: Matrix Representations and Basic Gates (January 29, 2025)}
+\addcontentsline{toc}{subsection}{Lecture 3: Matrix Representations and Basic Gates}
 
 \section{Matrix Representation of Quantum Gates}
 In quantum computing, the state of an \(n\)-qubit system is represented by a \(2^n\)-dimensional vector. Quantum gates are represented by \(2^n \times 2^n\) unitary matrices. A six-qubit quantum gate must be represented by a \(64 \times 64\) unitary matrix. The unitary condition:
@@ -47,6 +64,7 @@ The circuit consists of:
 \begin{itemize}
     \item Applying \(H\) to the first qubit.
     \item Applying CNOT, with the first qubit as the control.
+    \item H turns the \(|0\rangle\) into \(|+\rangle\) and \(|1\rangle\) into \(|-\rangle\)
 \end{itemize}
 
 \section{Quantum Circuit Representation}
@@ -72,6 +90,59 @@ Complex multi-qubit gates can be decomposed into single-qubit gates and CNOTs. E
 \section{No-Cloning Theorem and Quantum Cloning}
 The CNOT gate cannot clone an arbitrary quantum state due to the no-cloning theorem. Example: Trying to copy \(\alpha|0\rangle + \beta|1\rangle\) results in entanglement, not an identical copy. Some specific states, like \(|0\rangle\) or \(|1\rangle\), can be cloned, but arbitrary superpositions cannot.
 
+\section{Multi Qubit or Composite States}
+\begin{itemize}
+    \item An n-qubit diagram will have n wires/lines
+    \item Tensor product state
+    \item entangled states (Bell) \(\alpha|0\rangle + \beta|1\rangle\)  and \(|1\rangle\) \textbf{bold}
+\end{itemize}
+\subsection{Tensor Product State:}
+A tensor product state is a product of single-qubit states. An example of this is 2 \(|0\rangle\) qubits in tensor product state: \(|0\rangle \otimes |0\rangle = |0\rangle |0\rangle = |00\rangle\)
+\begin{itemize}
+    \item \(|00\rangle = \begin{bmatrix} 1 & \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\ 0 & \begin{pmatrix} 0 \\ 1 \end{pmatrix} \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}\) and \(|11\rangle = \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix}\) and \(|01\rangle = \begin{bmatrix} 1 & \begin{pmatrix} 0 \\ 1 \end{pmatrix} \\ 0 & \begin{pmatrix} 0 \\ 1 \end{pmatrix} \end{bmatrix} = \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}\)
+    \item Keep piling on from the right for more qubits.
+\end{itemize}
+\subsection{Bell States:}
+Bell states are quintessential entangled 2-qubit states. Pauli exclusion principle states that no two fermions can occupy the same quantum state. So if you have one electron spin up and one spin down, the sign is minus. Also, a cheat sheet for signs is any state with a 1 first is minus, and 0 first is plus.
+\subsubsection{Bell State 1 \(|\beta_{00}\rangle = \frac{|00\rangle + |11\rangle}{\sqrt{2}}\):}
+\begin{itemize}
+    \item In this state you know the bit on the right by measuring the bit on the left.
+    \item If the left bit is \(|0\rangle\) then the right bit is \(|0\rangle\)
+    \item If the left bit is \(|1\rangle\) then the right bit is \(|1\rangle\)
+    \item This is a Bell state because it is an entangled state.
+\end{itemize}
+\subsubsection{Bell State 2 \(|\beta_{01}\rangle = \frac{|01\rangle + |10\rangle}{\sqrt{2}}\):}
+\begin{itemize}
+    \item In this state you know the bit on the left by measuring the bit on the right.
+    \item If the right bit is \(|0\rangle\) then the left bit is \(|1\rangle\)
+    \item If the right bit is \(|1\rangle\) then the left bit is \(|0\rangle\)
+    \item This is a Bell state because it is an entangled state.
+\end{itemize}
+\subsubsection{Bell State 3 \(|\beta_{10}\rangle = \frac{|00\rangle - |11\rangle}{\sqrt{2}}\):}
+\begin{itemize}
+    \item In this state you know the bit on the right by measuring the bit on the left.
+    \item If the left bit is \(|0\rangle\) then the right bit is \(|1\rangle\)
+    \item If the left bit is \(|1\rangle\) then the right bit is \(|0\rangle\)
+    \item This is a Bell state because it is an entangled state.
+\end{itemize}
+\subsubsection{Bell State 4 \(|\beta_{11}\rangle = \frac{|01\rangle - |10\rangle}{\sqrt{2}}\):}
+\begin{itemize}
+    \item In this state you know the bit on the left by measuring the bit on the right.
+    \item If the right bit is \(|0\rangle\) then the left bit is \(|1\rangle\)
+    \item If the right bit is \(|1\rangle\) then the left bit is \(|0\rangle\)
+    \item This is a Bell state because it is an entangled state.
+\end{itemize}
+\subsection{CNOT 2-qubit Operator:}
+To make Bell states we need the CNOT 2-qubit operator. Given by:
+\[
+\text{CNOT} = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{bmatrix}
+\]
+\begin{itemize}
+    \item If the control qubit is \(|0\rangle\) then the target qubit is unchanged.
+    \item If the control qubit is \(|1\rangle\) then the target qubit is flipped.
+\end{itemize}
+
+
 \section{Key Takeaways for Class Questions}
 \begin{itemize}
     \item What size matrix represents an \(n\)-qubit gate? \(2^n \times 2^n\) unitary matrix.
@@ -81,5 +152,13 @@ The CNOT gate cannot clone an arbitrary quantum state due to the no-cloning theo
     \item What do wires in a circuit mean? Time evolution of a quantum state.
     \item Can quantum states be cloned? No, due to the no-cloning theorem.
 \end{itemize}
+
+\newpage
+\section*{Chapter 2: Advanced Quantum Operations}
+\addcontentsline{toc}{section}{Chapter 2: Advanced Quantum Operations}
+\subsection*{Lecture 4: Coming Soon (February 3, 2025)}
+\addcontentsline{toc}{subsection}{Lecture 4: Coming Soon}
+
+\emph{Content for this lecture will be added in the next class.}
 
 \end{document}
