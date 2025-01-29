@@ -2,9 +2,60 @@
 \usepackage{amsmath, amssymb, bm}
 \usepackage{braket}
 
-% Add packages for better chapter handling and TOC
+% Enhanced packages for better document structure
 \usepackage{titlesec}
 \usepackage{tocloft}
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage{mdframed}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{xcolor}
+
+% Set better margins
+\geometry{margin=1in}
+
+% Configure theorem-like environments
+\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+% Define a nice box for important concepts
+\newmdenv[
+  linewidth=0.5pt,
+  skipabove=1em,
+  skipbelow=1em,
+  backgroundcolor=gray!10,
+  innerleftmargin=5pt,
+  innerrightmargin=5pt,
+  innertopmargin=5pt,
+  innerbottommargin=5pt
+]{conceptbox}
+
+% Configure section formatting for chapters
+\titleformat{\section}
+  {\LARGE\bfseries}{\thesection.}{1em}{\MakeUppercase}
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+% Configure subsection and subsubsection formatting
+\titleformat{\subsection}
+  {\Large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\large\bfseries}{\thesubsubsection}{1em}{}
+
+% Configure spacing
+\titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% Configure list spacing
+\setlist{itemsep=0.5em}
+
+% Configure TOC depth and formatting
+\setcounter{tocdepth}{3}
+\renewcommand{\cftsecfont}{\Large\bfseries}
+\renewcommand{\cftsecpagefont}{\bfseries}
+\renewcommand{\cftsubsecindent}{2em}
+\renewcommand{\cftsubsubsecindent}{4em}
 
 \title{Quantum Computing Fundamentals}
 \author{PHYS 370}
@@ -16,32 +67,41 @@
 \tableofcontents
 \newpage
 
-\section*{Chapter 1: Quantum Gates and Circuits}
-\addcontentsline{toc}{section}{Chapter 1: Quantum Gates and Circuits}
-\subsection*{Lecture 3: Matrix Representations and Basic Gates (January 29, 2025)}
-\addcontentsline{toc}{subsection}{Lecture 3: Matrix Representations and Basic Gates}
+\section{Lecture 3: Quantum Gates and Circuits}
+\subsubsection*{January 29, 2025}
 
-\section{Matrix Representation of Quantum Gates}
+\subsection{Matrix Representation of Quantum Gates}
+\begin{conceptbox}
 In quantum computing, the state of an \(n\)-qubit system is represented by a \(2^n\)-dimensional vector. Quantum gates are represented by \(2^n \times 2^n\) unitary matrices. A six-qubit quantum gate must be represented by a \(64 \times 64\) unitary matrix. The unitary condition:
 \[
 U^{\dagger}U = U U^{\dagger} = I,
 \]
 where \(U^{\dagger}\) is the Hermitian conjugate (conjugate transpose) of \(U\).
+\end{conceptbox}
 
-\section{Pauli Matrices as Quantum Gates}
+\subsection{Pauli Matrices as Quantum Gates}
+\begin{definition}[Pauli Matrices]
 The Pauli matrices (\(X, Y, Z\)) are fundamental single-qubit gates:
 \begin{align*}
 X & = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \quad \text{(Bit-flip gate)} \\
 Y & = \begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix} \quad \text{(Bit \& Phase-flip)} \\
 Z & = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \quad \text{(Phase-flip gate)}
-\end{align*}`'
+\end{align*}
 These matrices are unitary (\(U^{\dagger} = U^{-1}\)) and Hermitian (\(U = U^{\dagger}\)), ensuring valid quantum operations.
+\end{definition}
 
-\section{Controlled-NOT (CNOT) Gate}
-The CNOT gate acts on two qubits, with one acting as a control and the other as a target. It performs a NOT operation on the target if and only if the control qubit is \(|1\rangle\). The matrix representation:
+\subsection{Controlled-NOT (CNOT) Gate}
+\begin{definition}[CNOT Gate]
+The CNOT gate acts on two qubits, with one acting as a control and the other as a target. It performs a NOT operation on the target if and only if the control qubit is \(|1\rangle\).
+\end{definition}
+
+\begin{example}[CNOT Matrix Representation]
 \[
 \text{CNOT} = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{bmatrix}
 \]
+\end{example}
+
+\begin{theorem}[CNOT Action]
 Using Dirac notation, its action is:
 \begin{align*}
 |00\rangle &\to |00\rangle \\
@@ -49,25 +109,31 @@ Using Dirac notation, its action is:
 |10\rangle &\to |11\rangle \quad \text{(flips target qubit)} \\
 |11\rangle &\to |10\rangle
 \end{align*}
-The CNOT gate can be used to create Bell states when combined with the Hadamard gate.
+\end{theorem}
 
-\section{Hadamard Gate and Bell State Generation}
+\subsection{Hadamard Gate and Bell State Generation}
+\begin{definition}[Hadamard Gate]
 The Hadamard gate (\(H\)) puts a qubit into an equal superposition:
 \[
 H = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
 \]
-Used to create Bell states in combination with CNOT. Example Bell state:
+\end{definition}
+
+\begin{example}[Bell State]
+A fundamental Bell state:
 \[
 |\beta_{00}\rangle = \frac{|00\rangle + |11\rangle}{\sqrt{2}}
 \]
-The circuit consists of:
-\begin{itemize}
+\end{example}
+
+The circuit construction consists of:
+\begin{enumerate}
     \item Applying \(H\) to the first qubit.
     \item Applying CNOT, with the first qubit as the control.
     \item H turns the \(|0\rangle\) into \(|+\rangle\) and \(|1\rangle\) into \(|-\rangle\)
-\end{itemize}
+\end{enumerate}
 
-\section{Quantum Circuit Representation}
+\subsection{Quantum Circuit Representation}
 \begin{itemize}
     \item Wires represent qubits and their evolution through time, not physical movement.
     \item Single-qubit gates (\(X, H, Z\), etc.) act on one qubit.
@@ -75,8 +141,11 @@ The circuit consists of:
     \item Measurement collapses the quantum state and is usually represented by an encircled \(M\) in diagrams.
 \end{itemize}
 
-\section{Controlled Gates and Universal Quantum Gates}
+\subsection{Controlled Gates and Universal Quantum Gates}
+\begin{definition}[Controlled Gates]
 Controlled gates allow conditional operations:
+\end{definition}
+
 \begin{itemize}
     \item Controlled-Z (CZ): Applies a \(Z\) gate to the target when control is \(|1\rangle\).
     \item Controlled-Hadamard (CH): Applies \(H\) to the target when control is \(|1\rangle\).
@@ -84,66 +153,89 @@ Controlled gates allow conditional operations:
     \item Fredkin Gate (CSWAP): Swaps two qubits based on a control qubit.
 \end{itemize}
 
-\section{Gate Decomposition}
+\subsection{Gate Decomposition}
+\begin{conceptbox}
 Complex multi-qubit gates can be decomposed into single-qubit gates and CNOTs. Example: Controlled-\(U\) decomposition replaces a controlled-\(U\) gate with a sequence of CNOTs and single-qubit rotations, used for efficient quantum circuit optimization.
+\end{conceptbox}
 
-\section{No-Cloning Theorem and Quantum Cloning}
+\subsection{No-Cloning Theorem and Quantum Cloning}
+\begin{theorem}[No-Cloning]
 The CNOT gate cannot clone an arbitrary quantum state due to the no-cloning theorem. Example: Trying to copy \(\alpha|0\rangle + \beta|1\rangle\) results in entanglement, not an identical copy. Some specific states, like \(|0\rangle\) or \(|1\rangle\), can be cloned, but arbitrary superpositions cannot.
+\end{theorem}
 
-\section{Multi Qubit or Composite States}
+\subsection{Multi Qubit or Composite States}
+\begin{definition}[Multi-Qubit States]
 \begin{itemize}
     \item An n-qubit diagram will have n wires/lines
     \item Tensor product state
     \item entangled states (Bell) \(\alpha|0\rangle + \beta|1\rangle\)  and \(|1\rangle\) \textbf{bold}
 \end{itemize}
-\subsection{Tensor Product State:}
+\end{definition}
+
+\subsubsection{Tensor Product State}
+\begin{definition}[Tensor Product]
 A tensor product state is a product of single-qubit states. An example of this is 2 \(|0\rangle\) qubits in tensor product state: \(|0\rangle \otimes |0\rangle = |0\rangle |0\rangle = |00\rangle\)
+\end{definition}
+
+\begin{example}[Matrix Representations]
 \begin{itemize}
     \item \(|00\rangle = \begin{bmatrix} 1 & \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\ 0 & \begin{pmatrix} 0 \\ 1 \end{pmatrix} \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}\) and \(|11\rangle = \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix}\) and \(|01\rangle = \begin{bmatrix} 1 & \begin{pmatrix} 0 \\ 1 \end{pmatrix} \\ 0 & \begin{pmatrix} 0 \\ 1 \end{pmatrix} \end{bmatrix} = \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}\)
     \item Keep piling on from the right for more qubits.
 \end{itemize}
-\subsection{Bell States:}
+\end{example}
+
+\subsubsection{Bell States}
+\begin{conceptbox}
 Bell states are quintessential entangled 2-qubit states. Pauli exclusion principle states that no two fermions can occupy the same quantum state. So if you have one electron spin up and one spin down, the sign is minus. Also, a cheat sheet for signs is any state with a 1 first is minus, and 0 first is plus.
-\subsubsection{Bell State 1 \(|\beta_{00}\rangle = \frac{|00\rangle + |11\rangle}{\sqrt{2}}\):}
+\end{conceptbox}
+
+\paragraph{Bell State 1} \(|\beta_{00}\rangle = \frac{|00\rangle + |11\rangle}{\sqrt{2}}\)
 \begin{itemize}
     \item In this state you know the bit on the right by measuring the bit on the left.
     \item If the left bit is \(|0\rangle\) then the right bit is \(|0\rangle\)
     \item If the left bit is \(|1\rangle\) then the right bit is \(|1\rangle\)
     \item This is a Bell state because it is an entangled state.
 \end{itemize}
-\subsubsection{Bell State 2 \(|\beta_{01}\rangle = \frac{|01\rangle + |10\rangle}{\sqrt{2}}\):}
+
+\paragraph{Bell State 2} \(|\beta_{01}\rangle = \frac{|01\rangle + |10\rangle}{\sqrt{2}}\)
 \begin{itemize}
     \item In this state you know the bit on the left by measuring the bit on the right.
     \item If the right bit is \(|0\rangle\) then the left bit is \(|1\rangle\)
     \item If the right bit is \(|1\rangle\) then the left bit is \(|0\rangle\)
     \item This is a Bell state because it is an entangled state.
 \end{itemize}
-\subsubsection{Bell State 3 \(|\beta_{10}\rangle = \frac{|00\rangle - |11\rangle}{\sqrt{2}}\):}
+
+\paragraph{Bell State 3} \(|\beta_{10}\rangle = \frac{|00\rangle - |11\rangle}{\sqrt{2}}\)
 \begin{itemize}
     \item In this state you know the bit on the right by measuring the bit on the left.
     \item If the left bit is \(|0\rangle\) then the right bit is \(|1\rangle\)
     \item If the left bit is \(|1\rangle\) then the right bit is \(|0\rangle\)
     \item This is a Bell state because it is an entangled state.
 \end{itemize}
-\subsubsection{Bell State 4 \(|\beta_{11}\rangle = \frac{|01\rangle - |10\rangle}{\sqrt{2}}\):}
+
+\paragraph{Bell State 4} \(|\beta_{11}\rangle = \frac{|01\rangle - |10\rangle}{\sqrt{2}}\)
 \begin{itemize}
     \item In this state you know the bit on the left by measuring the bit on the right.
     \item If the right bit is \(|0\rangle\) then the left bit is \(|1\rangle\)
     \item If the right bit is \(|1\rangle\) then the left bit is \(|0\rangle\)
     \item This is a Bell state because it is an entangled state.
 \end{itemize}
-\subsection{CNOT 2-qubit Operator:}
+
+\subsubsection{CNOT 2-qubit Operator}
+\begin{definition}[CNOT 2-qubit Operator]
 To make Bell states we need the CNOT 2-qubit operator. Given by:
 \[
 \text{CNOT} = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{bmatrix}
 \]
+\end{definition}
+
 \begin{itemize}
     \item If the control qubit is \(|0\rangle\) then the target qubit is unchanged.
     \item If the control qubit is \(|1\rangle\) then the target qubit is flipped.
 \end{itemize}
 
-
-\section{Key Takeaways for Class Questions}
+\subsection{Key Takeaways for Class Questions}
+\begin{conceptbox}
 \begin{itemize}
     \item What size matrix represents an \(n\)-qubit gate? \(2^n \times 2^n\) unitary matrix.
     \item Why are Pauli matrices quantum gates? They are unitary and Hermitian.
@@ -152,12 +244,11 @@ To make Bell states we need the CNOT 2-qubit operator. Given by:
     \item What do wires in a circuit mean? Time evolution of a quantum state.
     \item Can quantum states be cloned? No, due to the no-cloning theorem.
 \end{itemize}
+\end{conceptbox}
 
 \newpage
-\section*{Chapter 2: Advanced Quantum Operations}
-\addcontentsline{toc}{section}{Chapter 2: Advanced Quantum Operations}
-\subsection*{Lecture 4: Coming Soon (February 3, 2025)}
-\addcontentsline{toc}{subsection}{Lecture 4: Coming Soon}
+\section{Lecture 4: Advanced Quantum Operations}
+\subsubsection*{February 3, 2025}
 
 \emph{Content for this lecture will be added in the next class.}
 
