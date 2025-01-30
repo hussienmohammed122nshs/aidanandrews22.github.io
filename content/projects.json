@@ -42,7 +42,7 @@
   {
     "id": "work",
     "title": "Work Code",
-    "description": "The repo attached contains some code that I have written for my work on <a href="https://uiuc.chat/cropwizard-1.5" target="_blank">CropWizard</a>",
+    "description": 'The repo attached contains some code that I have written for my work on <a href="https://uiuc.chat/cropwizard-1.5" target="_blank">CropWizard</a>',
     "demoLink": null,
     "githubLink": "https://github.com/aidanandrews22/CropWizard-Tools",
     "tags": ["AI & Machine Learning", "LLMs"]
