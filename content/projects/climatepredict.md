@@ -133,10 +133,10 @@ loop {
 
 #### Visualizations
 
-![Global Temperature](/assets/Global_Temperature.png)
+![Global Temperature](/assets/Project/climatepredict/Global_Temperature.png)
 
 1. **Linear Regression Fit**
-   ![Linear Regression](/assets/linear_regression.png)
+   ![Linear Regression](/assets/Project/climatepredict/linear_regression.png)
    
 2. **Polynomial Regression Curve**
    - Visualization of the polynomial fit for nonlinear relationships.

@@ -12,7 +12,7 @@ The CNN model was designed to accurately recognize handwritten Devanagari charac
 4. **Dropout Layer**: Set at 50% to prevent overfitting by randomly setting half of the input units to 0 at each update during training.
 5. **Dense Layers**: Use softmax activation to classify the distinct characters.
 
-![Model Architecture](/assets/model_architecture.png)
+![Model Architecture](/assets/Project/devanagari-web-app/model_architecture.png)
 
 ### Model Code With Detailed Comments
 
@@ -109,7 +109,7 @@ To understand and address the overfitting issue, a detailed analysis of the mode
    
 3. **Evaluation Metrics**: Accuracy and loss were monitored throughout the training process. Step times were printed to keep track of the computational efficiency.
 
-![Graphs and Statistical Analysis](/assets/dp_testing.png)
+![Graphs and Statistical Analysis](/assets/Project/devanagari-web-app/dp_testing.png)
 
 ### Libraries Used
 - Python
