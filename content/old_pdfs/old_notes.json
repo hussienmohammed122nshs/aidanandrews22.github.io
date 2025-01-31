@@ -1,0 +1,29 @@
+[
+    {
+      "id": "note1",
+      "title": "Place Holder",
+      "date": "2024-07-26",
+      "category": "Misc",
+      "isPublic": true,
+      "userId": "default_user",
+      "lastEdited": "2024-07-26"
+    },
+    {
+      "id": "note1722368450060",
+      "title": "Hello YouTube I am Working!",
+      "category": "Misc",
+      "date": "2024-07-31",
+      "isPublic": true,
+      "userId": "default_user",
+      "lastEdited": "2024-07-31"
+    },
+    {
+      "id": "note1722403913513",
+      "title": "Multi-language Markdown Sample",
+      "category": "Misc",
+      "date": "2024-07-31",
+      "isPublic": true,
+      "userId": "default_user",
+      "lastEdited": "2024-07-31"
+    }
+]
