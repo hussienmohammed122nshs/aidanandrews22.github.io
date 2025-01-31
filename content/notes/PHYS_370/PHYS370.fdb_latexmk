@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1738186571.83289 "/Users/aidan/Documents/Code/Projects/website_data/content/notes/PHYS_370/PHYS370.tex" "PHYS370.pdf" "PHYS370" 1738186572.33935 0
-  "/Users/aidan/Documents/Code/Projects/website_data/content/notes/PHYS_370/PHYS370.tex" 1738186571.06968 10555 b19b838dfeaff5836f1cefa55677c4dd ""
+["pdflatex"] 1738273022.51631 "/Users/aidan/Documents/Code/Projects/website_data/content/notes/PHYS_370/PHYS370.tex" "PHYS370.pdf" "PHYS370" 1738273023.00175 0
+  "/Users/aidan/Documents/Code/Projects/website_data/content/notes/PHYS_370/PHYS370.tex" 1738273021.42779 10556 954989692fd319b06b02b3db3c09383b ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -113,9 +113,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1733650409.85545 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1733650377 8221429 1cb58034c95791b03b024709956d83bd ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "PHYS370.aux" 1738186572.27909 4426 97e557d4a71284bfb7033d40e92d52b8 "pdflatex"
-  "PHYS370.tex" 1738186571.06968 10555 b19b838dfeaff5836f1cefa55677c4dd ""
-  "PHYS370.toc" 1738186572.27995 1425 21da7a58ec17b682840bc0ecd43a8e6d "pdflatex"
+  "PHYS370.aux" 1738273022.94498 4426 97e557d4a71284bfb7033d40e92d52b8 "pdflatex"
+  "PHYS370.tex" 1738273021.42779 10556 954989692fd319b06b02b3db3c09383b ""
+  "PHYS370.toc" 1738273022.94589 1425 21da7a58ec17b682840bc0ecd43a8e6d "pdflatex"
   (generated)
   "PHYS370.aux"
   "PHYS370.log"

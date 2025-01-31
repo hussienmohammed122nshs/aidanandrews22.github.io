@@ -1,0 +1,6 @@
+\contentsline {chapter}{\numberline {1}Daily Notes}{1}{}%
+\contentsline {section}{\numberline {1.1}January 30, 2025}{1}{}%
+\contentsline {section}{\numberline {1.2}January 31, 2025}{2}{}%
+\contentsline {chapter}{\numberline {2}Arbitrary Thoughts}{3}{}%
+\contentsline {section}{\numberline {2.1}On Self-Sufficiency}{3}{}%
+\contentsline {section}{\numberline {2.2}On Openness}{3}{}%

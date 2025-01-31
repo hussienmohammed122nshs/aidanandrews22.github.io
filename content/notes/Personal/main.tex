@@ -1,0 +1,60 @@
+\documentclass[11pt]{book}
+\usepackage{lipsum} % For dummy text
+\usepackage[hmargin=2.5cm, vmargin=2.5cm, marginparwidth=2.5cm, marginparsep=3mm]{geometry}
+\usepackage{fontenc}
+\usepackage{microtype} % For better typography
+\usepackage[explicit]{titlesec} % For title formatting
+\usepackage{setspace} % For line spacing
+\usepackage{fancyhdr} % For header and footer
+\usepackage{enumitem} % For list formatting
+\usepackage{ragged2e} % For better text alignment
+
+% Typography settings
+\setstretch{1.2} % Comfortable line spacing
+\pagestyle{plain}
+
+% Strict alignment settings
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\RaggedRight % Slightly better than fully ragged right
+
+% Title formatting with strict alignment
+\titleformat{\chapter}[display]
+    {\normalfont\huge\bfseries\filcenter} % Centered chapters
+    {\chaptertitlename\ \thechapter}
+    {20pt}
+    {#1}
+\titlespacing*{\chapter}{0pt}{50pt}{40pt}
+
+\titleformat{\section}[hang]
+    {\normalfont\Large\bfseries\raggedright} % Left-aligned sections
+    {\thesection.}
+    {1em}
+    {#1}
+\titlespacing*{\section}
+    {0pt} % left margin
+    {3.5ex plus 1ex minus .2ex} % space before
+    {2.3ex plus .2ex} % space after
+
+% Quote environment settings
+\renewenvironment{quote}
+    {\list{}{\rightmargin=2em\leftmargin=2em}%
+        \item\relax\small\itshape}
+    {\endlist}
+
+% Custom title page
+\title{\Huge\textbf{Reflections}\\\vspace{0.5cm}\Large A Personal Meditation}
+\author{Aidan Andrews}
+\date{2025-01-30}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
+\include{book1}
+\include{book2}
+
+\end{document} 
