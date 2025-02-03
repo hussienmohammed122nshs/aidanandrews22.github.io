@@ -250,7 +250,95 @@ To make Bell states we need the CNOT 2-qubit operator. Given by:
 \section{Lecture 4: Advanced Quantum Operations}
 \subsubsection*{February 3, 2025}
 
-\emph{Content for this lecture will be added in the next class.}
+\subsection{Checkpoint: Quiz Questions and Answers}
+\begin{conceptbox}
+\textbf{Key Questions and Answers:}
+\begin{enumerate}
+    \item \textbf{Q: What is the problem with trying to make copies of quantum data?} \\
+    \textbf{A:} There is no unitary operator that exists which could be used to clone arbitrary quantum states, and so it simply isn't possible.
+    
+    \item \textbf{Q: In the teleportation example with Alice and Bob, why is the overall interaction remarkable?} \\
+    \textbf{A:} Because a measurement on Alice's end seemingly 'caused' a change on Bob's end across space and time through no classical communication, only quantum.
+    
+    \item \textbf{Q: Why is it necessary for Alice to make a measurement during the teleportation process?} \\
+    \textbf{A:} Because the very act of measurement will 'collapse' the unknown state into one of the other four possible states, depending on what Alice measures.
+\end{enumerate}
+\end{conceptbox}
+
+\subsection{No-Cloning Theorem}
+\begin{definition}[No-Cloning Theorem]
+It is impossible to create an identical copy of an arbitrary unknown quantum state.
+\end{definition}
+
+\begin{theorem}[Mathematical Explanation]
+Suppose a unitary operation \(U\) could clone states:
+\[
+U(|\psi\rangle \otimes |\chi\rangle) = |\psi\rangle \otimes |\psi\rangle
+\]
+\[
+U(|\phi\rangle \otimes |\chi\rangle) = |\phi\rangle \otimes |\phi\rangle
+\]
+By taking the inner product and using the properties of unitarity, we reach a contradiction. This means cloning only works for orthogonal states but not for arbitrary quantum states.
+\end{theorem}
+
+\subsection{Quantum Teleportation}
+\begin{definition}[Quantum Teleportation]
+Quantum teleportation allows the transfer of a quantum state from Alice to Bob using an entangled pair and classical communication.
+\end{definition}
+
+\begin{itemize}
+    \item \textbf{Key Steps:}
+    \begin{enumerate}
+        \item Alice and Bob share an \textbf{entangled EPR pair}
+        \item Alice \textbf{applies a CNOT gate} and \textbf{Hadamard gate} to her qubit
+        \item Alice \textbf{measures her qubits}, collapsing the system
+        \item Alice sends \textbf{classical information} (two classical bits) to Bob
+        \item Bob applies appropriate \textbf{quantum gate operations} (X, Z, or both)
+    \end{enumerate}
+\end{itemize}
+
+\begin{conceptbox}
+\textbf{Important Note:} Teleportation \textbf{does not allow faster-than-light communication} because classical communication is required.
+\end{conceptbox}
+
+\subsection{Superdense Coding}
+\begin{definition}[Superdense Coding]
+A technique for sending two classical bits of information using only one qubit, leveraging entanglement.
+\end{definition}
+
+\begin{itemize}
+    \item \textbf{Process:}
+    \begin{enumerate}
+        \item Alice and Bob share an entangled qubit pair
+        \item Alice applies specific operations to encode two classical bits:
+        \begin{itemize}
+            \item Identity (I) \(\rightarrow\) \textbf{00}
+            \item X gate \(\rightarrow\) \textbf{01}
+            \item Z gate \(\rightarrow\) \textbf{10}
+            \item ZX gate \(\rightarrow\) \textbf{11}
+        \end{itemize}
+        \item Alice sends the qubit to Bob
+        \item Bob measures in the Bell basis to extract information
+    \end{enumerate}
+\end{itemize}
+
+\subsection{Tools of Quantum Information Theory}
+\subsubsection{Fidelity and Distance Measures}
+\begin{itemize}
+    \item \textbf{Trace Distance:} Measures how distinguishable two quantum states are
+    \item \textbf{Fidelity:} Measures how similar two quantum states are
+    \item \textbf{Entanglement Measures:} Concurrence and Entanglement of Formation quantify entanglement
+\end{itemize}
+
+\begin{conceptbox}
+\textbf{Key Summary Points:}
+\begin{itemize}
+    \item Quantum teleportation and superdense coding demonstrate practical applications of entanglement
+    \item The No-Cloning Theorem ensures security in quantum communication
+    \item Quantum operations (Hadamard, CNOT) are fundamental for state manipulation
+    \item Classical communication remains necessary despite quantum advantages
+\end{itemize}
+\end{conceptbox}
 
 \end{document}
 
