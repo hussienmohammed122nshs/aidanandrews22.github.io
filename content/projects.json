@@ -48,6 +48,14 @@
     "tags": ["AI & Machine Learning", "LLMs"]
   },
   {
+    "id": "research-agent",
+    "title": "Research Agent",
+    "description": "I am building a research agent that is more accurate than OpenAI's DeepResearch (for specific use cases). Really just building this thing for myself, it's proven to be very useful thusfar.",
+    "demoLink": "https://example.com/",
+    "githubLink": "https://github.com/aidanandrews22/Research-Agent",
+    "tags": ["AI & Machine Learning", "LLMs"]
+  },
+  {
     "id": "old-website",
     "title": "Old Website",
     "description": "I like the simplicity of my current website opposed to this 'modern' look.",
