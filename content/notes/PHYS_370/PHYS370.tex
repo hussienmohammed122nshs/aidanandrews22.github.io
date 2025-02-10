@@ -64,6 +64,7 @@
 \begin{document}
 \maketitle
 
+\newpage
 \tableofcontents
 \newpage
 
@@ -179,8 +180,9 @@ A tensor product state is a product of single-qubit states. An example of this i
 
 \begin{example}[Matrix Representations]
 \begin{itemize}
-    \item \(|00\rangle = \begin{bmatrix} 1 & \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\ 0 & \begin{pmatrix} 0 \\ 1 \end{pmatrix} \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}\) and \(|11\rangle = \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix}\) and \(|01\rangle = \begin{bmatrix} 1 & \begin{pmatrix} 0 \\ 1 \end{pmatrix} \\ 0 & \begin{pmatrix} 0 \\ 1 \end{pmatrix} \end{bmatrix} = \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}\)
-    \item Keep piling on from the right for more qubits.
+    \item \(|00\rangle = \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}\)
+    \item \(|11\rangle = \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix}\)
+    \item \(|01\rangle = \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}\)
 \end{itemize}
 \end{example}
 
@@ -267,7 +269,7 @@ To make Bell states we need the CNOT 2-qubit operator. Given by:
 
 \subsection{No-Cloning Theorem}
 \begin{definition}[No-Cloning Theorem]
-It is impossible to create an identical copy of an arbitrary unknown quantum state.
+It is impossible to create an identical copy of an arbitrary unknown quantum state. There is no \underline{universal} unitary operator that will allow us to create a copy of an \underline{arbitrary} quantum state.
 \end{definition}
 
 \begin{theorem}[Mathematical Explanation]
@@ -289,10 +291,27 @@ Quantum teleportation allows the transfer of a quantum state from Alice to Bob u
 \begin{itemize}
     \item \textbf{Key Steps:}
     \begin{enumerate}
-        \item Alice and Bob share an \textbf{entangled EPR pair}
+        \item Alice and Bob share an \textbf{entangled Bell state or EPR(Einstein-Podolsky-Rosen) pair}
         \item Alice \textbf{applies a CNOT gate} and \textbf{Hadamard gate} to her qubit
-        \item Alice \textbf{measures her qubits}, collapsing the system
-        \item Alice sends \textbf{classical information} (two classical bits) to Bob
+        \item Alice \textbf{measures her qubits}, collapsing the system (her qubit vanishes)
+        \item Alice sends \textbf{classical information} (two classical bits or phone call) to Bob
+        \item Bob applies appropriate \textbf{quantum gate operations} (X, Z, or both)
+    \end{enumerate}
+\end{itemize}
+
+\begin{definition}[Quantum Teleportation]
+Alice want to "send" a state \(|\chi\rangle\) to Bob and: \[ |\chi\rangle = \alpha|0\rangle + \beta|1\rangle \]
+\end{definition}
+
+\begin{itemize}
+    \item \textbf{Key Steps:}
+    \begin{enumerate}
+        \item Alice and Bob share an entangled (Bell) state: \[ |\beta_{00}\rangle = \frac{|00\rangle_{AB} + |11\rangle_{AB}}{\sqrt{2}} \]
+        \subitem  \(|\psi\rangle_{1} = (\alpha|0\rangle_A + \beta|1\rangle_A) \otimes \frac{1}{\sqrt{2}} (|00\rangle_{AB} + |11\rangle_{AB}) = \frac{\alpha}{\sqrt{2}}(|000\rangle_{AAB} + |011\rangle_{AAB}) + \frac{\beta}{\sqrt{2}}(|100\rangle_{AAB} + |111\rangle_{AAB})\)
+        \item Alice applies a CNOT operator with the control qubit from \(|\chi\rangle\) and the target is Alice's member of entangled pair
+        \item Alice applies a Hadamard operator to the \(|\chi\rangle\) qubit: \(|\psi\rangle_{2} = \frac{\alpha}{\sqrt{2}}|0\rangle_{A} \otimes (|00\rangle_{AB} + |11\rangle_{AB}) + \frac{\beta}{\sqrt{2}}(|1\rangle_{A} \otimes (|10\rangle_{AB} + |01\rangle_{AB}))\)
+        \item Alice measures her two qubits
+        \item Alice sends \textbf{classical information} (two classical bits or phone call) to Bob
         \item Bob applies appropriate \textbf{quantum gate operations} (X, Z, or both)
     \end{enumerate}
 \end{itemize}
@@ -339,6 +358,498 @@ A technique for sending two classical bits of information using only one qubit, 
     \item Classical communication remains necessary despite quantum advantages
 \end{itemize}
 \end{conceptbox}
+
+\newpage
+\section{Lecture 6: Operators in Quantum Mechanics}
+\subsubsection*{(Date TBD)}
+
+\subsection{Adjoints and Hermitian Operators}
+
+A final rule to note is that the adjoint of a sum is equal to the sum of the adjoints:
+\[
+(\hat{A} + \hat{B} + \hat{C})^{\dagger} = \hat{A}^{\dagger} + \hat{B}^{\dagger} + \hat{C}^{\dagger}
+\tag{3.29}
+\]
+
+\paragraph{Example 3.4:} Find the adjoint of the operator \(\hat{A} = 2|0)(1| - i|1)(0|\).
+
+\paragraph{Solution:} 
+First we note that (3.29) tells us that
+\[
+\hat{A}^{\dagger} = (2|0)(1|)^{\dagger} - (i|1)(0|)^{\dagger}.
+\]
+We can compute the adjoint of each term by taking the complex conjugate of the constants in each expression and then applying the usual rules for bras and kets. We find that
+\[
+\hat{A}^{\dagger} = 2 \,|1)(0| + i \,|0)(1|.
+\]
+
+\paragraph{You Try It:} 
+Show that the adjoint of 
+\[
+\hat{B} = 
+\begin{pmatrix}
+3i & 0 \\
+0 & 2i
+\end{pmatrix}
+\]
+is given by 
+\[
+\hat{B}^{\dagger} =
+\begin{pmatrix}
+-3i & 0 \\
+0 & -2i
+\end{pmatrix}.
+\]
+
+Considering the matrix representation of an operator, we compute its Hermitian adjoint in two steps:
+\begin{itemize}
+\item Compute the transpose of the matrix (swap rows and columns).
+\item Compute the complex conjugate of each element.
+\end{itemize}
+
+For a general \(2 \times 2\) matrix given by
+\[
+A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \tag{3.30}
+\]
+the Hermitian conjugate is
+\[
+A^\dagger 
+= \begin{pmatrix} 
+a^* & c^* \\ 
+b^* & d^* 
+\end{pmatrix} 
+\tag{3.31}
+\]
+
+\begin{definition}[Hermitian Operator]
+An operator \(\hat{A}\) is said to be Hermitian if
+\[
+\hat{A} = \hat{A}^{\dagger}.
+\tag{3.32}
+\]
+\end{definition}
+
+Clearly, the operator used in Example 3.3, \(\hat{A} = \begin{pmatrix}2 & 0\\ 1&i\end{pmatrix}\), is not Hermitian. However, the Pauli operators are Hermitian. For example, the operator \(Y\) is written as 
+\[
+Y = -\,i|0)(1| + i|1)(0|
+\]
+using the computational basis. The adjoint of this
+expression is
+\[
+Y^\dagger 
+= \bigl(-\,i|0)(1| + i|1)(0| \bigr)^\dagger
+= i\,|1)(0| - i\,|0)(1|
+= Y
+\tag{3.33}
+\]
+It turns out that in quantum mechanics, operators that represent physical observables are Hermitian.
+
+The matrix representation of a Hermitian operator has real matrix elements
+along its diagonal. In the space \(\mathbb{C}^2\), given a matrix representation (3.30) it must be the case that \(a\) and \(d\) are real (\(a = a^*, d = d^*\)) and \(c = b^*\).
+
+\begin{definition}[Unitary Operator]
+The inverse of an operator \(\hat{A}\) is denoted by \(\hat{A}^{-1}\). This operator satisfies \(\hat{A}\hat{A}^{-1} = \hat{A}^{-1}\hat{A} = I\), where \(I\) is the identity operator. An operator is said to be unitary if its adjoint is equal to its inverse. Unitary operators are often denoted using the symbol \(U\), and we can state its definition as
+\[
+U U^{\dagger} = U^{\dagger} U = I.
+\tag{3.34}
+\]
+Unitary operators are important because they describe the time evolution of a quan\-tum state. The Pauli operators are both Hermitian and Unitary.
+\end{definition}
+
+\begin{definition}[Normal Operator]
+An operator \(\hat{A}\) is said to be normal if
+\[
+\hat{A}\hat{A}^{\dagger} = \hat{A}^{\dagger}\hat{A}.
+\tag{3.35}
+\]
+Later in the chapter when we consider the commutator of two operators, we will see that this means a normal operator is one that commutes with its adjoint. Hermitian and unitary operators are normal.
+\end{definition}
+
+\subsection{Eigenvalues and Eigenvectors}
+
+A given vector is said to be an eigenvector of an operator \(\hat{A}\) if the following equation is satisfied, where \(\lambda\) is a complex number:
+\[
+\hat{A}|\psi) = \lambda|\psi).
+\]
+The number \(\lambda\) is called an eigenvalue of the operator \(\hat{A}\). For example, looking at (3.11) and Example 3.3, we see that the computational basis states are the eigenvectors of the \(Z\) operator.
+
+A common problem in quantum mechanics is the following: given an operator,
+find its eigenvalues and eigenvectors. The first step in this process is to find the eigenvalues using what is known as the characteristic equation.
+
+\paragraph{The Characteristic Equation:}
+The characteristic equation for an operator \(\hat{A}\) is found by solving the following equation:
+\[
+\det(\hat{A} - \lambda I) = 0,
+\tag{3.36}
+\]
+where \(\lambda\) is an unknown variable, \(I\) is the identity matrix, and \(\det\) denotes the determinant of the matrix \(\hat{A} - \lambda I\). The values of \(\lambda\) that are the solutions to this equation are the eigenvalues of the operator \(\hat{A}\). The determinant of a \(2 \times 2\) matrix (3.30) is
+\[
+\det(A) = ad - bc.
+\tag{3.37}
+\]
+
+\paragraph{Example 3.5:}  
+Find the eigenvalues of an operator with matrix representation
+\[
+\begin{pmatrix}
+2  &  1 \\
+-1 & -1
+\end{pmatrix}.
+\]
+
+\paragraph{Solution:}
+First we construct the matrix \(A - \lambda I\):
+\[
+A - \lambda I
+= \begin{pmatrix}
+2 & 1 \\
+-1 & -1
+\end{pmatrix}
+-
+\begin{pmatrix}
+\lambda & 0 \\
+0 & \lambda
+\end{pmatrix}
+=
+\begin{pmatrix}
+2 - \lambda & 1 \\
+-1 & -1 - \lambda
+\end{pmatrix}.
+\]
+Then we compute the determinant:
+\[
+\det(A - \lambda I) 
+= (2 - \lambda)(-1 - \lambda) - (-1)(1).
+\]
+Expanding:
+\[
+(2 - \lambda)(-1 - \lambda) + 1 
+= -2 + \lambda -2\lambda + \lambda^2 + 1 
+= \lambda^2 - \lambda -1.
+\]
+Setting this equal to zero, we get
+\[
+\lambda^2 - \lambda -1 = 0.
+\]
+Solving via the quadratic formula, 
+\[
+\lambda_{1,2}
+= \frac{1 \pm \sqrt{5}}{2}.
+\]
+
+\paragraph{You Try It:} 
+Using the matrix representation of the \(Z\) operator, show that its eigenvalues are \(\pm 1\).
+
+Once the eigenvalues are known, the eigenvectors can be found. This is done by writing out the eigenvalue equation
+\[
+\hat{A}|\psi) = \lambda|\psi)
+\]
+for each eigenvalue \(\lambda\) and an eigenvector \(|\psi)\) with unknown components that we call \(\alpha, \beta\). This leads to a set of equations we can solve. Usually the equations allow us to relate the two variables but leave one undetermined. In quantum mechanics, we also require normalization:
+\[
+|\alpha|^2 + |\beta|^2 = 1.
+\]
+Hence the procedure works as follows:  
+1. Solve the characteristic equation to find the eigenvalues.  
+2. For each eigenvalue, use the eigenvalue equation to generate relations among the components of the eigenvector.  
+3. Use the normalization condition to find those components.
+
+If each of the eigenvectors of an operator is associated with a unique eigenvalue, we say that they are nondegenerate. If two or more eigenvectors are degenerate, this means that they correspond to the same eigenvalue.
+
+\paragraph{Example 3.6:}  
+Find the eigenvalues and eigenvectors for the "\(\pi/8\)" gate, which has the matrix representation
+\[
+T = \begin{pmatrix}
+1 & 0 \\
+0 & e^{i\pi/4}
+\end{pmatrix}.
+\]
+
+\paragraph{Solution:}
+We begin by solving the characteristic equation:
+\[
+0 = \det(T - \lambda I)
+= \det\!
+\begin{pmatrix}
+1 - \lambda & 0 \\
+0 & e^{i\pi/4} - \lambda
+\end{pmatrix}.
+\]
+Since the determinant of a diagonal matrix is the product of its diagonal elements, we have
+\[
+(1 - \lambda)(e^{i\pi/4} - \lambda) = 0.
+\]
+Hence the eigenvalues are
+\[
+\lambda_1 = 1,
+\quad
+\lambda_2 = e^{i\pi/4}.
+\]
+Next, we find the corresponding eigenvectors. For \(\lambda_1 = 1\), let
+\[
+|\phi_1) =
+\begin{pmatrix}
+a\\
+b
+\end{pmatrix}.
+\]
+Then
+\[
+T |\phi_1)
+= \begin{pmatrix}
+1 & 0\\
+0 & e^{i\pi/4}
+\end{pmatrix}
+\begin{pmatrix}
+a \\
+b
+\end{pmatrix}
+=
+\begin{pmatrix}
+a \\
+e^{i\pi/4}b
+\end{pmatrix}
+=
+\begin{pmatrix}
+a \\
+b
+\end{pmatrix}.
+\]
+Equating the lower components gives \(e^{i\pi/4} b = b\). Since \(e^{i\pi/4} \neq 1\), we must have \(b = 0\). Using normalization \(|a|^2 = 1\), we get \(a = 1\). So
+\[
+|\phi_1) = 
+\begin{pmatrix}
+1\\
+0
+\end{pmatrix}.
+\]
+For \(\lambda_2 = e^{i\pi/4}\), again let
+\[
+|\phi_2) = 
+\begin{pmatrix}
+a\\
+b
+\end{pmatrix}.
+\]
+Then
+\[
+T |\phi_2)
+= 
+\begin{pmatrix}
+1 & 0\\
+0 & e^{i\pi/4}
+\end{pmatrix}
+\begin{pmatrix}
+a\\
+b
+\end{pmatrix}
+=
+\begin{pmatrix}
+a\\
+e^{i\pi/4}b
+\end{pmatrix},
+\]
+and we want this to equal
+\[
+e^{i\pi/4}
+\begin{pmatrix}
+a\\
+b
+\end{pmatrix}
+=
+\begin{pmatrix}
+e^{i\pi/4} a\\
+e^{i\pi/4} b
+\end{pmatrix}.
+\]
+We see \(a = 0\) is required, and with \(|b|^2 = 1\), we get \(b = 1\). So
+\[
+|\phi_2) = 
+\begin{pmatrix}
+0\\
+1
+\end{pmatrix}.
+\]
+It is straightforward to verify these solutions satisfy the eigenvalue equations. An important fact is that for a Hermitian operator, eigenvalues are real, and for a unitary operator, eigenvalues lie on the complex unit circle (they have modulus 1).
+
+\subsection{Spectral Decomposition}
+
+An operator \(\hat{A}\) is said to be normal if and only if it has a diagonal matrix representation with respect to some orthonormal basis of the vector space. This result is known as the spectral decomposition theorem. Suppose that an operator \(\hat{A}\) satisfies the spectral decomposition theorem for some basis \(\{|u_i\rangle\}\). Then we can write
+\[
+\hat{A}
+= \sum_{i=1}^n a_i |u_i\rangle\langle u_i|,
+\tag{3.38}
+\]
+where \(a_i\) are the eigenvalues of the operator. In the computational basis, the \(Z\) operator is diagonal. We have already seen the \(Z\) operator written in the form of (3.38) when we considered \(Z = |0\rangle\langle 0| - |1\rangle\langle 1|\).
+
+\paragraph{Example 3.7:}
+Using the spectral decomposition theorem, write down the representation (3.38) for the operator
+\[
+A
+= \begin{pmatrix}
+0 & 0 & i \\
+0 & 0 & 0 \\
+-i & 0 & 0
+\end{pmatrix}.
+\]
+
+\paragraph{Solution:}
+The eigenvectors of this matrix are (you can verify):
+\[
+|u_1\rangle 
+= \frac{1}{\sqrt{2}}
+\begin{pmatrix}1 \\ 0 \\ 1\end{pmatrix},
+\quad
+|u_2\rangle 
+= \frac{1}{\sqrt{2}}
+\begin{pmatrix}1 \\ 0 \\ -1\end{pmatrix},
+\quad
+|u_3\rangle 
+= \begin{pmatrix}0 \\ 1 \\ 0\end{pmatrix}.
+\]
+The corresponding eigenvalues are \(a_1 = -1\), \(a_2 = 1\), and \(a_3 = 0\). Since this matrix is Hermitian, its eigenvectors form an orthonormal basis. We can therefore write
+\[
+A
+= -\,|u_1\rangle\langle u_1| 
++ \,|u_2\rangle\langle u_2|
++ \,|u_3\rangle\langle u_3|.
+\]
+
+\subsection{The Trace of an Operator}
+
+If an operator is in a matrix representation, the trace of the operator is the sum of the diagonal elements. For example, for
+\[
+A = \begin{pmatrix} a & b \\ c & d \end{pmatrix},
+\quad
+\mathrm{Tr}(A) = a + d.
+\]
+If an operator is written as an outer product, we take the trace by summing over inner products with basis vectors. If we label a basis \(\{|u_i\rangle\}\), then
+\[
+\mathrm{Tr}(\hat{A}) 
+= \sum_{i=1}^n \langle u_i|\hat{A}|u_i\rangle.
+\]
+
+\paragraph{Example 3.8:} 
+An operator expressed in the \(\{|0\rangle, |1\rangle\}\) basis is given by
+\[
+A = 2i\,|0\rangle\langle 0| \;+\; 3\,|0\rangle\langle 1|
+      \;-\; 2\,|1\rangle\langle 0| \;+\; 4\,|1\rangle\langle 1|.
+\]
+Find the trace.
+
+\paragraph{Solution:}
+We compute
+\[
+\mathrm{Tr}(A)
+= \langle 0|A|0\rangle + \langle 1|A|1\rangle.
+\]
+Focusing on \(\langle 0|A|0\rangle\):
+\[
+\langle 0|\bigl(2i|0\rangle\langle 0| 
++ 3|0\rangle\langle 1|
+- 2|1\rangle\langle 0|
++ 4|1\rangle\langle 1|\bigr)|0\rangle
+= 2i\,(\langle 0|0\rangle\langle 0|0\rangle) = 2i.
+\]
+Similarly,
+\[
+\langle 1|A|1\rangle
+= 4\,(\langle 1|1\rangle\langle 1|1\rangle) = 4.
+\]
+Hence,
+\[
+\mathrm{Tr}(A) = 2i + 4.
+\]
+
+\paragraph{Example 3.9:} 
+Find the trace of the \(Z\) operator.
+
+\paragraph{Solution:}
+Using the matrix representation of \(Z\) in the computational basis:
+\[
+Z
+= \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix},
+\]
+we sum the diagonal elements:
+\[
+\mathrm{Tr}(Z) = 1 + (-1) = 0.
+\]
+
+\paragraph{Important Properties of the Trace:}
+\begin{itemize}
+\item The trace is cyclic: \(\mathrm{Tr}(ABC) = \mathrm{Tr}(CAB) = \mathrm{Tr}(BCA)\).
+\item \(\mathrm{Tr}(|\phi\rangle\langle\psi|) = \langle\psi|\phi\rangle\).
+\item More generally, \(\mathrm{Tr}(A|\psi\rangle\langle\phi|) = \langle\phi|A|\psi\rangle\).
+\item The trace is basis-independent.
+\item The trace of an operator is equal to the sum of its eigenvalues.
+\end{itemize}
+
+\paragraph{Example 3.10:}
+Show that the trace of a matrix is equal to the sum of its eigenvalues for
+\[
+X = \begin{pmatrix} 0 & 1\\ 1 & 0\end{pmatrix}, 
+\quad
+T = \begin{pmatrix} 1 & 0\\ 0 & e^{i\pi/4}\end{pmatrix},
+\quad
+B = \begin{pmatrix} 1 & 0 & 2\\ 0 & 3 & 4\\ 1 & 0 & 2\end{pmatrix}.
+\]
+
+\paragraph{Solution:}
+\[
+\mathrm{Tr}(X) = 0 + 0 = 0,
+\quad
+\mathrm{Tr}(T) = 1 + e^{i\pi/4},
+\quad
+\mathrm{Tr}(B) = 1 + 3 + 2 = 6.
+\]
+We found that
+\[
+\text{eigenvalues}(X) = \{1, -1\}, \quad 
+\text{sum} = 0,
+\]
+\[
+\text{eigenvalues}(T) = \{1, e^{i\pi/4}\}, \quad 
+\text{sum} = 1 + e^{i\pi/4},
+\]
+\[
+\text{eigenvalues}(B) = \{0, 3, 3\}, 
+\quad
+\text{sum} = 6.
+\]
+Hence each trace matches the sum of the corresponding eigenvalues.
+
+\paragraph{Example 3.11:}
+Prove that
+\[
+\mathrm{Tr}(A|\phi\rangle\langle\psi|) = \langle\psi|A|\phi\rangle.
+\]
+
+\paragraph{Solution:}
+Using an arbitrary basis \(\{|u_i\rangle\}\),
+\[
+\mathrm{Tr}(A|\phi\rangle\langle\psi|)
+= \sum_i \langle u_i|A|\phi\rangle \langle\psi|u_i\rangle
+= \langle\psi|\Bigl(\sum_i |u_i\rangle\langle u_i|\Bigr)A|\phi\rangle
+= \langle\psi|A|\phi\rangle.
+\]
+We used the completeness relation \(\sum_i |u_i\rangle\langle u_i| = I\) and the fact that inner products are just scalars that can be rearranged.
+
+\subsection{The Expectation Value of an Operator}
+
+The expectation value of an operator is the mean or average value of that operator with respect to a given quantum state. Symbolically,
+\[
+\langle A \rangle = (\psi|A|\psi).
+\tag{3.39}
+\]
+
+\paragraph{Example 3.12:}
+A quantum system is in the state
+\[
+|\psi\rangle = \frac{1}{\sqrt{3}}\,|0\rangle + \frac{2}{\sqrt{3}}\,|1\rangle.
+\]
+What is the expectation value of \(X\) in this state?
+
+\bigskip
+% (End of Lecture 6 material)
 
 \end{document}
 
