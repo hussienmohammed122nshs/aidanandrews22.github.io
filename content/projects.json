@@ -11,7 +11,7 @@
     "id": "illini-spots",
     "title": "IlliniSpots: The Instagram of study spots at UIUC",
     "description": "Shows all buildings on campus with room availability. Users can favorite buildings and comment.",
-    "demoLink": "https://example.com/",
+    "demoLink": null,
     "githubLink": "https://github.com/aidanandrews22/IlliniSpots",
     "tags": ["Swift, React Native", "Postgres, Firebase", "Search"]
   },
