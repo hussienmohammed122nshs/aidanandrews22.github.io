@@ -56,14 +56,6 @@
     "tags": ["AI & Machine Learning", "LLMs"]
   },
   {
-    "id": "old-website",
-    "title": "Old Website",
-    "description": "I like the simplicity of my current website opposed to this 'modern' look.",
-    "demoLink": "https://dev3489.d2nkyw5uoshkyz.amplifyapp.com",
-    "githubLink": "https://github.com/aidanandrews22/Portfolio-Website-1",
-    "tags": ["Web Dev"]
-  },
-  {
     "id": "nvralone",
     "title": "NVRALONE",
     "description": "I made this entire website, with the help of Shopify templates. The bulk of my work was spent on customer acquisition algorithms, marketing, managing, and designing.",
@@ -74,9 +66,17 @@
   {
     "id": "this-website",
     "title": "This Website",
-    "description": "I wrote this entire website from scratch. Getting some inspiration from other portfolio websites. Notably, I wrote the algorithm for state change without reload and the sorting algorithm for the blog posts.",
+    "description": "I wrote this entire website from scratch using React, ts, and tailwind v4",
     "demoLink": "https://aidanandrews.info/",
-    "githubLink": "https://github.com/aidanandrews22/Simple-Website",
+    "githubLink": "https://github.com/aidanandrews22/Portfolio.git",
+    "tags": ["Web Dev"]
+  },
+  {
+    "id": "old-website",
+    "title": "Old Website",
+    "description": "I rebuilt everything from scratch. The old site was fine but wasn't stable",
+    "demoLink": "https://dev3489.d2nkyw5uoshkyz.amplifyapp.com",
+    "githubLink": "https://github.com/aidanandrews22/Portfolio-old.git",
     "tags": ["Web Dev"]
   }
 ]
