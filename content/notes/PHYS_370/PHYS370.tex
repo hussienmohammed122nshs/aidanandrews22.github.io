@@ -11,6 +11,7 @@
 \usepackage{enumitem}
 \usepackage{geometry}
 \usepackage{xcolor}
+\usepackage{tikz} % Added for circuit diagrams
 
 % Set better margins
 \geometry{margin=1in}
@@ -361,7 +362,7 @@ A technique for sending two classical bits of information using only one qubit, 
 
 \newpage
 \section{Lecture 6: Operators in Quantum Mechanics}
-\subsubsection*{(Date TBD)}
+\subsubsection*{February 10, 2025}
 
 \subsection{Adjoints and Hermitian Operators}
 
@@ -849,7 +850,323 @@ A quantum system is in the state
 What is the expectation value of \(X\) in this state?
 
 \bigskip
-% (End of Lecture 6 material)
+
+\newpage
+\section{Lecture 7: Quantum Algorithms}
+\subsubsection*{February 17, 2025}
+
+\subsection{Introduction to Quantum Algorithms}
+\begin{definition}[Quantum Algorithm]
+A quantum algorithm is a set of instructions designed to be executed on a quantum computer, leveraging quantum mechanics to perform calculations more efficiently than classical computers.
+\end{definition}
+
+\begin{conceptbox}
+Key advantages of quantum computing arise from:
+\begin{itemize}
+    \item \textbf{Superposition}: A quantum system can exist in multiple states simultaneously
+    \item \textbf{Quantum Parallelism}: Evaluation of functions at multiple inputs simultaneously
+    \item \textbf{Quantum Interference}: Manipulation of quantum states to extract useful information
+\end{itemize}
+\end{conceptbox}
+
+\subsection{Mathematical Foundations}
+Given a function \(f(x)\), a quantum algorithm can evaluate \(f(x)\) at multiple values simultaneously:
+\[
+U_f |x\rangle = |f(x)\rangle
+\]
+where \(U_f\) represents a quantum operation acting on an input state \(|x\rangle\).
+
+\subsection{Hadamard Gates and Quantum Superposition}
+\begin{definition}[Hadamard Gate]
+The Hadamard gate \(H\) creates superposition states:
+\[
+H |0\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}, \quad H |1\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}}
+\]
+\end{definition}
+
+\begin{example}[Hadamard on Arbitrary Qubit]
+For an arbitrary qubit \(|\psi\rangle = \alpha |0\rangle + \beta |1\rangle\), the Hadamard transformation is:
+\[
+H |\psi\rangle = \frac{\alpha + \beta}{\sqrt{2}} |0\rangle + \frac{\alpha - \beta}{\sqrt{2}} |1\rangle
+\]
+\end{example}
+
+\subsection{Parallel Hadamard Operations}
+\begin{definition}[Hadamard Transform]
+The Hadamard Transform \(H^{\otimes n}\) applies Hadamard gates to multiple qubits in parallel:
+\[
+H^{\otimes n} |0\rangle^{\otimes n} = \frac{1}{\sqrt{2^n}} \sum_{x \in \{0,1\}^n} |x\rangle
+\]
+\end{definition}
+
+\begin{example}[Two-Qubit Hadamard]
+For two qubits initialized in \(|00\rangle\):
+\[
+(H \otimes H) |00\rangle = \frac{1}{2} (|00\rangle + |01\rangle + |10\rangle + |11\rangle)
+\]
+\end{example}
+
+\subsection{Phase Gates}
+\begin{definition}[Phase Gate]
+The discrete phase gate \(R_k\) applies a phase shift:
+\[
+R_k =
+\begin{bmatrix}
+1 & 0 \\
+0 & e^{2\pi i / 2^k}
+\end{bmatrix}
+\]
+\end{definition}
+
+\subsection{Matrix Representations}
+\begin{conceptbox}
+Common quantum gates in matrix form:
+\begin{itemize}
+    \item \textbf{Hadamard Gate:}
+    \[
+    H = \frac{1}{\sqrt{2}}
+    \begin{bmatrix}
+    1 & 1 \\
+    1 & -1
+    \end{bmatrix}
+    \]
+    \item \textbf{Phase Gate:}
+    \[
+    P(\theta) =
+    \begin{bmatrix}
+    1 & 0 \\
+    0 & e^{i\theta}
+    \end{bmatrix}
+    \]
+\end{itemize}
+\end{conceptbox}
+
+\subsection{Deutsch's Algorithm}
+\begin{definition}[Deutsch's Algorithm]
+An algorithm that determines whether a function \(f: \{0,1\} \to \{0,1\}\) is constant or balanced using a single function evaluation.
+\end{definition}
+
+\begin{theorem}[Deutsch's Algorithm Steps]
+\begin{enumerate}
+    \item Prepare input state:
+    \[
+    |\psi\rangle = H |0\rangle H |1\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}} \otimes \frac{|0\rangle - |1\rangle}{\sqrt{2}}
+    \]
+    \item Apply function as quantum operation:
+    \[
+    U_f |x\rangle |y\rangle = |x\rangle |y \oplus f(x)\rangle
+    \]
+    \item Measure to determine if \(f(x)\) is constant or balanced
+\end{enumerate}
+\end{theorem}
+
+\begin{conceptbox}
+\textbf{Key Takeaways:}
+\begin{itemize}
+    \item Quantum algorithms leverage superposition and parallelism
+    \item Hadamard gates create quantum superposition
+    \item Phase gates introduce complex phase factors
+    \item Deutsch's Algorithm demonstrates quantum speedup
+\end{itemize}
+\end{conceptbox}
+
+\newpage
+\section{Lecture 8: Quantum Interference and Deutsch's Algorithm}
+\subsubsection*{February 24, 2025}
+
+\subsection{Quantum Interference}
+\begin{conceptbox}
+The Hadamard gate transformation of $|\psi\rangle = |0\rangle$ demonstrates quantum interference through:
+\begin{itemize}
+    \item \textbf{Positive interference}: Probability amplitudes add constructively for basis state $|0\rangle$, increasing measurement probability to unity
+    \item \textbf{Negative interference}: Terms $|1\rangle$ and $-|1\rangle$ cancel, reducing measurement probability to zero
+\end{itemize}
+\end{conceptbox}
+
+Quantum interference plays a crucial role in quantum algorithms by allowing us to gain information about a function $f(x)$ that depends on evaluating the function at many values of $x$ simultaneously. This enables deduction of certain global properties of the function.
+
+\subsection{Quantum Parallelism and Function Evaluation}
+\begin{definition}[Function Types]
+For a single-bit input function $f: \{0,1\} \to \{0,1\}$, we have:
+\begin{itemize}
+    \item Identity function:
+    \[
+    f(x) = \begin{cases}
+    0 & \text{if } x = 0 \\
+    1 & \text{if } x = 1
+    \end{cases}
+    \]
+    \item Constant functions: $f(x) = 0$ or $f(x) = 1$
+    \item Bit flip function:
+    \[
+    f(x) = \begin{cases}
+    1 & \text{if } x = 0 \\
+    0 & \text{if } x = 1
+    \end{cases}
+    \]
+\end{itemize}
+The identity and bit flip functions are called \textbf{balanced} because outputs are opposite for half the inputs.
+\end{definition}
+
+\subsection{Deutsch's Algorithm Implementation}
+\begin{definition}[Unitary Operation $U_f$]
+The operation $U_f$ acts on two qubits:
+\[
+U_f|x,y\rangle = |x, y \oplus f(x)\rangle
+\]
+where $x,y \in \{0,1\}$.
+\end{definition}
+
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=1.5]
+\draw (0,1) -- (3,1);
+\draw (0,0) -- (3,0);
+\node[left] at (0,1) {$|0\rangle$};
+\node[left] at (0,0) {$|0\rangle$};
+\draw[fill=white] (0.5,0.75) rectangle (1,1.25);
+\node at (0.75,1) {$H$};
+\draw[fill=white] (2,1) rectangle (2.5,0);
+\node at (2.25,0.5) {$U_f$};
+\node[right] at (3,1) {$x$};
+\node[right] at (3,0) {$y \oplus f(x)$};
+\end{tikzpicture}
+\caption{Circuit diagram for $U_f|x,y\rangle = |x,y \oplus f(x)\rangle$ where the first qubit is in superposition and second qubit is $|0\rangle$}
+\end{figure}
+
+The algorithm's steps:
+\begin{enumerate}
+    \item Apply Hadamard gates to input state $|0\rangle|1\rangle$ to produce product state of superpositions
+    \item Apply $U_f$ to that product state
+    \item Apply Hadamard gate to first qubit only
+\end{enumerate}
+
+\begin{conceptbox}
+Let's examine how $U_f$ acts on the computational basis states:
+\[
+U_f|00\rangle = |0, 0 \oplus f(0)\rangle = (1-f(0))|00\rangle + f(0)|01\rangle
+\]
+
+This result accounts for both possibilities where $0 \oplus f(0) = 0$ and $0 \oplus f(0) = 1$. To understand this:
+\begin{itemize}
+    \item If $f(0) = 0$, then $0 \oplus f(0) = 0 \oplus 0 = 0$ and:
+    \[
+    |0, 0 \oplus f(0)\rangle = (1-f(0))|00\rangle + f(0)|01\rangle = |00\rangle + (0)|01\rangle = |00\rangle
+    \]
+    \item If $f(0) = 1$, then $0 \oplus f(0) = 0 \oplus 1 = 1$ and:
+    \[
+    |0, 0 \oplus f(0)\rangle = (1-f(0))|00\rangle + f(0)|01\rangle = (0)|00\rangle + (1)|01\rangle = |01\rangle
+    \]
+\end{itemize}
+
+Similar logic applies to the other basis states:
+\begin{align*}
+U_f|01\rangle &= |0, 1 \oplus f(0)\rangle = f(0)|00\rangle + (1-f(0))|01\rangle \\
+U_f|10\rangle &= |1, 0 \oplus f(1)\rangle = (1-f(1))|10\rangle + f(1)|11\rangle \\
+U_f|11\rangle &= |1, 1 \oplus f(1)\rangle = f(1)|10\rangle + (1-f(1))|11\rangle
+\end{align*}
+\end{conceptbox}
+
+\begin{theorem}[Deutsch's Algorithm Output]
+The final output state is:
+\[
+|\psi_{\text{out}}\rangle = \begin{cases}
+(1-2f(0)
+
+|0\rangle\oplus\left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right) & \text{if } f(0) = f(1) \text{ (constant)} \\
+\pm|1\rangle\oplus\left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right) & \text{if } f(0) \neq f(1) \text{ (balanced)}
+\end{cases}
+\]
+\end{theorem}
+
+\subsection{Deutsch-Jozsa Algorithm}
+\begin{definition}[Deutsch-Jozsa Algorithm]
+A generalization of Deutsch's algorithm for functions with multiple input values. For $f(x)$ with $n$ input values:
+\begin{itemize}
+    \item \textbf{Constant}: Output is same for all input values $x$
+    \item \textbf{Balanced}: $f(x) = 0$ for half inputs and $f(x) = 1$ for other half
+\end{itemize}
+\end{definition}
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[scale=1.5]
+    % Lines
+    \draw (0,1) -- (4,1);
+    \draw (0,0) -- (4,0);
+    
+    % Initial states
+    \node[left] at (0,1) {$|0\rangle$};
+    \node[left] at (0,0) {$|1\rangle$};
+    
+    % n-qubit notation
+    \draw[thick] (0.3,1.2) -- (0.3,0.8);
+    \node[above] at (0.3,1.2) {$n$};
+    
+    % First H gates
+    \draw[fill=white] (0.7,0.75) rectangle (1.2,1.25);
+    \node at (0.95,1) {$H^{\otimes n}$};
+    \draw[fill=white] (0.7,-0.25) rectangle (1.2,0.25);
+    \node at (0.95,0) {$H$};
+    
+    % State labels
+    \node at (1.6,1.4) {$|\psi'\rangle$};
+    
+    % Uf box
+    \draw[fill=white] (2,1) rectangle (3,0);
+    \node at (2.5,0.75) {$x$ ($n$ inputs)};
+    \node at (2.5,0.5) {$U_f$};
+    \node at (2.5,0.25) {$y$};
+    
+    % Output labels
+    \node at (3.3,1.4) {$|\psi''\rangle$};
+    \node at (2.5,-0.3) {$y \oplus f(x)$};
+    
+    % Final H gate
+    \draw[fill=white] (3.3,0.75) rectangle (3.8,1.25);
+    \node at (3.55,1) {$H^{\otimes n}$};
+    
+    % Output x label
+    \node at (3.55,1.4) {$x$};
+    \end{tikzpicture}
+    \caption{Circuit diagram for the Deutsch-Jozsa algorithm showing the $n$-qubit input register and auxiliary qubit}
+\end{figure}
+
+\begin{theorem}[Measurement Results]
+After measuring the $n$ input qubits in the final state:
+\begin{itemize}
+    \item If all qubits are 0: $f(x)$ is constant
+    \item If at least one qubit is 1: $f(x)$ is balanced
+\end{itemize}
+\end{theorem}
+
+\begin{example}[Constant Function]
+For $f(x) = 1$ with two inputs:
+\begin{enumerate}
+    \item Initial state: $|\psi_{\text{in}}\rangle = |0\rangle|0\rangle|1\rangle$
+    \item After Hadamard gates:
+    \[
+    |\psi_t\rangle = \frac{1}{2\sqrt{2}}(|000\rangle - |001\rangle + |010\rangle - |011\rangle + |100\rangle - |101\rangle + |110\rangle - |111\rangle)
+    \]
+    \item Final state after all operations:
+    \[
+    |\psi_{\text{out}}\rangle = -|00\rangle\left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right)
+    \]
+    \item Measurement of first two qubits gives 00, confirming constant function
+\end{enumerate}
+\end{example}
+
+\begin{example}[Balanced Function]
+For $f(00) = f(01) = 0$, $f(10) = f(11) = 1$:
+\begin{enumerate}
+    \item Initial state: $|\psi_{\text{in}}\rangle = |0\rangle|0\rangle|1\rangle$
+    \item After all operations:
+    \[
+    |\psi_{\text{out}}\rangle = |10\rangle\left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right)
+    \]
+    \item Measurement of first two qubits gives 10, confirming balanced function
+\end{enumerate}
+\end{example}
 
 \end{document}
-
