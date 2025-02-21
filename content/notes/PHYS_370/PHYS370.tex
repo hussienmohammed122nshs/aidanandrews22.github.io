@@ -1023,8 +1023,6 @@ where $x,y \in \{0,1\}$.
 \begin{tikzpicture}[scale=1.5]
 \draw (0,1) -- (3,1);
 \draw (0,0) -- (3,0);
-\node[left] at (0,1) {$|0\rangle$};
-\node[left] at (0,0) {$|0\rangle$};
 \draw[fill=white] (0.5,0.75) rectangle (1,1.25);
 \node at (0.75,1) {$H$};
 \draw[fill=white] (2,1) rectangle (2.5,0);
@@ -1072,9 +1070,7 @@ U_f|11\rangle &= |1, 1 \oplus f(1)\rangle = f(1)|10\rangle + (1-f(1))|11\rangle
 The final output state is:
 \[
 |\psi_{\text{out}}\rangle = \begin{cases}
-(1-2f(0)
-
-|0\rangle\oplus\left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right) & \text{if } f(0) = f(1) \text{ (constant)} \\
+(1-2f(0))|0\rangle\oplus\left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right) & \text{if } f(0) = f(1) \text{ (constant)} \\
 \pm|1\rangle\oplus\left(\frac{|0\rangle - |1\rangle}{\sqrt{2}}\right) & \text{if } f(0) \neq f(1) \text{ (balanced)}
 \end{cases}
 \]
@@ -1168,5 +1164,336 @@ For $f(00) = f(01) = 0$, $f(10) = f(11) = 1$:
     \item Measurement of first two qubits gives 10, confirming balanced function
 \end{enumerate}
 \end{example}
+
+\newpage
+\section{Lecture 9: Review}
+\subsubsection*{March 3, 2025}
+
+\subsection{Review of Key Concepts}
+\begin{conceptbox}
+Key topics covered in this course:
+\begin{itemize}
+    \item Matrix representation of quantum gates
+    \item Pauli matrices and their properties
+    \item Quantum states and their representations
+    \item Eigenvalues and eigenvectors
+    \item Quantum algorithms (Deutsch's Algorithm)
+    \item Quantum interference and superposition
+\end{itemize}
+\end{conceptbox}
+
+\subsection{Fundamental Concepts Review}
+
+\subsubsection{Quantum States and Operations}
+\begin{definition}[Quantum State]
+A quantum state \(|\psi\rangle\) is a unit vector in a complex Hilbert space. For a single qubit:
+\[
+|\psi\rangle = \alpha|0\rangle + \beta|1\rangle, \quad \text{where } |\alpha|^2 + |\beta|^2 = 1
+\]
+\end{definition}
+
+\begin{conceptbox}
+\textbf{Essential Properties of Quantum States:}
+\begin{itemize}
+    \item \textbf{Normalization}: All quantum states must be normalized
+    \item \textbf{Superposition}: States can exist in multiple basis states simultaneously
+    \item \textbf{Measurement}: Collapses the state to a basis state with probability given by squared amplitude
+\end{itemize}
+\end{conceptbox}
+
+\subsubsection{Fundamental Quantum Gates}
+\begin{itemize}
+    \item \textbf{Pauli Matrices:}
+    \[
+    X = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \quad
+    Y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \quad
+    Z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
+    \]
+    
+    \item \textbf{Hadamard Gate:}
+    \[
+    H = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}
+    \]
+    Creates superposition: \(H|0\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}} = |+\rangle\)
+    
+    \item \textbf{CNOT Gate:}
+    \[
+    \text{CNOT} = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{pmatrix}
+    \]
+\end{itemize}
+
+\subsubsection{Key Theorems and Properties}
+\begin{theorem}[No-Cloning Theorem]
+It is impossible to create an identical copy of an arbitrary unknown quantum state. This is fundamental to quantum mechanics and quantum computing.
+\end{theorem}
+
+\begin{theorem}[Properties of Quantum Gates]
+All quantum gates must be:
+\begin{itemize}
+    \item \textbf{Unitary}: \(U^{\dagger}U = UU^{\dagger} = I\)
+    \item \textbf{Reversible}: Every quantum operation must be reversible
+    \item \textbf{Linear}: \(U(\alpha|\psi\rangle + \beta|\phi\rangle) = \alpha U|\psi\rangle + \beta U|\phi\rangle\)
+\end{itemize}
+\end{theorem}
+
+\subsubsection{Bell States and Entanglement}
+The four Bell states form a maximally entangled basis:
+\begin{align*}
+|\beta_{00}\rangle &= \frac{|00\rangle + |11\rangle}{\sqrt{2}} \\
+|\beta_{01}\rangle &= \frac{|01\rangle + |10\rangle}{\sqrt{2}} \\
+|\beta_{10}\rangle &= \frac{|00\rangle - |11\rangle}{\sqrt{2}} \\
+|\beta_{11}\rangle &= \frac{|01\rangle - |10\rangle}{\sqrt{2}}
+\end{align*}
+
+\subsubsection{Quantum Algorithms}
+\begin{conceptbox}
+\textbf{Deutsch's Algorithm:}
+\begin{enumerate}
+    \item Input state: \(|0\rangle|1\rangle\)
+    \item Apply Hadamard gates: \(H^{\otimes 2}|0\rangle|1\rangle\)
+    \item Apply \(U_f\): Function evaluation in superposition
+    \item Apply Hadamard to first qubit
+    \item Measure first qubit:
+    \begin{itemize}
+        \item |0⟩: function is constant
+        \item |1⟩: function is balanced
+    \end{itemize}
+\end{enumerate}
+\end{conceptbox}
+
+\subsubsection{Quantum Measurements}
+\begin{itemize}
+    \item Measurement in computational basis: \(|0\rangle, |1\rangle\)
+    \item Measurement in diagonal basis: \(|+\rangle, |-\rangle\)
+    \item Probability of outcome: \(P(|i\rangle) = |\langle i|\psi\rangle|^2\)
+    \item Post-measurement state collapses to measured basis state
+\end{itemize}
+
+\newpage
+\subsection{1. Quantum States Review}
+\textbf{Key Concepts of Quantum States:}
+\begin{itemize}
+    \item \textbf{Single Qubit States:}
+        \begin{itemize}
+            \item General form: \(\lvert \psi \rangle = \alpha\lvert 0 \rangle + \beta \lvert 1 \rangle\)
+            \item Normalization: \(\lvert \alpha \rvert^2 + \lvert \beta \rvert^2 = 1\)
+            \item Computational basis: \(\lvert 0 \rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix},\; \lvert 1 \rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix}\)
+        \end{itemize}
+    \item \textbf{Multi-Qubit States:}
+        \begin{itemize}
+            \item Tensor product: \(\lvert 00 \rangle = \lvert 0 \rangle \otimes \lvert 0 \rangle\)
+            \item Bell states (entangled):
+                \begin{align*}
+                \lvert \beta_{00} \rangle &= \frac{\lvert 00 \rangle + \lvert 11 \rangle}{\sqrt{2}}, \quad
+                \lvert \beta_{01} \rangle = \frac{\lvert 01 \rangle + \lvert 10 \rangle}{\sqrt{2}} \\
+                \lvert \beta_{10} \rangle &= \frac{\lvert 00 \rangle - \lvert 11 \rangle}{\sqrt{2}}, \quad
+                \lvert \beta_{11} \rangle = \frac{\lvert 01 \rangle - \lvert 10 \rangle}{\sqrt{2}}
+                \end{align*}
+        \end{itemize}
+    \item \textbf{Superposition States:}
+        \begin{itemize}
+            \item Plus/Minus basis: \(\lvert \pm \rangle = \frac{\lvert 0 \rangle \pm \lvert 1 \rangle}{\sqrt{2}}\)
+            \item Created by Hadamard gate: \(H \lvert 0 \rangle = \lvert + \rangle\)
+        \end{itemize}
+    \item \textbf{Measurement:}
+        \begin{itemize}
+            \item Probability: \(P(\lvert i \rangle) = \lvert \langle i \rvert \psi \rangle \rvert^2\)
+            \item State collapse after measurement
+            \item No-cloning theorem implications
+        \end{itemize}
+\end{itemize}
+
+\textbf{Additional Details on Quantum States:}
+\begin{itemize}
+    \item \textbf{Bloch Sphere Representation:} A single qubit can be visualized on a Bloch sphere with polar and azimuthal angles \((\theta, \phi)\). Any state can be written as
+    \[
+    \lvert \psi \rangle = \cos\left(\tfrac{\theta}{2}\right)\lvert 0 \rangle + e^{i\phi}\sin\left(\tfrac{\theta}{2}\right)\lvert 1 \rangle.
+    \]
+    \item \textbf{Global vs. Relative Phase:} A global phase \(e^{i\gamma}\) does not affect measurement outcomes, while a relative phase between \(\lvert 0 \rangle\) and \(\lvert 1 \rangle\) does affect interference.
+    \item \textbf{Mixed States vs. Pure States:} 
+        \begin{itemize}
+            \item \emph{Pure states}: Described by a single state vector \(\lvert \psi \rangle\).
+            \item \emph{Mixed states}: Described by a density operator \(\rho = \sum_i p_i \lvert \psi_i \rangle \langle \psi_i \rvert\) to account for probabilistic mixtures.
+        \end{itemize}
+    \item \textbf{Partial Trace and Reduced Density Matrices:} For multi-qubit systems, the state of one subsystem is found by tracing out the other qubits.
+    \[
+    \rho_A = \mathrm{Tr}_B(\rho_{AB}).
+    \]
+    \item \textbf{Entanglement as a Resource:} Entangled states like Bell states enable protocols such as teleportation and superdense coding.
+\end{itemize}
+
+\newpage
+\subsection{2. Operators Review}
+\textbf{Essential Operators and Properties:}
+\begin{itemize}
+    \item \textbf{Fundamental Properties:}
+        \begin{itemize}
+            \item Unitarity: \(U^\dagger U = UU^\dagger = I\)
+            \item Hermiticity (all observables are Hermitian): \(A^\dagger = (A^*)^T = A\)
+            \item Linearity: \(A (\alpha \lvert \psi \rangle + \beta \lvert \phi \rangle) = \alpha A \lvert \psi \rangle + \beta A \lvert \phi \rangle\)
+        \end{itemize}
+        
+    \item \textbf{Pauli Operators:}
+        \begin{align*}
+        X &= 
+        \begin{pmatrix}
+        0 & 1 \\
+        1 & 0
+        \end{pmatrix}, \quad
+        Y = 
+        \begin{pmatrix}
+        0 & -i \\
+        i & 0
+        \end{pmatrix}, \quad
+        Z = 
+        \begin{pmatrix}
+        1 & 0 \\
+        0 & -1
+        \end{pmatrix}
+        \end{align*}
+    \item \textbf{Common Gates:}
+        \begin{itemize}
+            \item Hadamard: \(H = \frac{1}{\sqrt{2}}
+            \begin{pmatrix}
+            1 & 1 \\
+            1 & -1
+            \end{pmatrix}\)
+            \item CNOT: Two-qubit controlled operation
+            \item Phase gates: \(R_k = \begin{pmatrix} 1 & 0 \\ 0 & e^{2\pi i/2^k} \end{pmatrix}\)
+        \end{itemize}
+    \item \textbf{Operator Properties:}
+        \begin{itemize}
+            \item Trace: \(\mathrm{Tr}(A) = \sum_i \langle i \lvert A \rvert i \rangle\)
+            \item Expectation value: \(\langle A \rangle = \langle \psi \lvert A \rvert \psi \rangle\)
+            \item Eigenvalues/vectors: \(A \lvert \psi \rangle = \lambda \lvert \psi \rangle\)
+        \end{itemize}
+\end{itemize}
+\textbf{Additional Details on Operators:}
+\begin{itemize}
+    \item \textbf{Spectral Theorem:} A normal operator (commutes with its adjoint) can be diagonalized in an orthonormal basis. Hermitian and unitary operators are special cases of normal operators.
+    \item \textbf{Commutators:} For two operators \(A\) and \(B\), the commutator is \([A,B] = AB - BA\). Hermitian and unitary operators that commute can share a common set of eigenvectors.
+    \item \textbf{Measurement Operators (Projectors)}: In projective measurements, the operator \(M_k\) satisfies \(M_k^\dagger M_k = M_k\) and \(M_k M_j = \delta_{kj} M_k\). These projectors correspond to measurement outcomes.
+    \item \textbf{POVM (Positive Operator-Valued Measure)}: A more general measurement formalism. The elements \(\{E_i\}\) satisfy \(E_i \ge 0\) and \(\sum_i E_i = I\), allowing generalized quantum measurements.
+    \item \textbf{Physical Observables:} Represented by Hermitian operators (e.g., Hamiltonian for energy). Eigenvalues of these operators correspond to possible measurement outcomes.
+\end{itemize}
+
+\newpage
+\subsection{3. Quantum Algorithms Review}
+\textbf{Key Quantum Algorithms and Concepts:}
+\begin{itemize}
+    \item \textbf{Deutsch's Algorithm:}
+        \begin{itemize}
+            \item Purpose: Determines if function is constant or balanced
+            \item Steps:
+                \begin{enumerate}
+                    \item Initialize: \(\lvert 0 \rangle \lvert 1 \rangle\)
+                    \item Apply Hadamards: \(H^{\otimes 2}\)
+                    \item Apply \(U_f\): function evaluation in superposition
+                    \item Final Hadamard on first qubit
+                    \item Measure: \(\lvert 0 \rangle\) (constant) vs. \(\lvert 1 \rangle\) (balanced)
+                \end{enumerate}
+        \end{itemize}
+    \item \textbf{Deutsch-Jozsa Algorithm:}
+        \begin{itemize}
+            \item Generalizes Deutsch's Algorithm to \(n\)-bit functions
+            \item One quantum query vs. \(2^{n-1}+1\) classical queries
+            \item Uses quantum parallelism
+        \end{itemize}
+    \item \textbf{Key Algorithm Components:}
+        \begin{itemize}
+            \item Quantum parallelism
+            \item Interference effects
+            \item Function evaluation in superposition
+            \item Measurement in appropriate basis
+        \end{itemize}
+    \item \textbf{Algorithm Analysis:}
+        \begin{itemize}
+            \item Quantum speedup sources
+            \item Role of entanglement
+            \item Classical vs. quantum complexity
+            \item Measurement impact on final state
+        \end{itemize}
+\end{itemize}
+\textbf{Further Exploration of Quantum Algorithms:}
+\begin{itemize}
+    \item \textbf{Phase Estimation Algorithm:} Fundamental for algorithms like Shor's, allows estimation of eigenvalues of a unitary operator. \\
+    \emph{Key Steps:} Involves Hadamard transforms, controlled-\(U\) operations, and inverse quantum Fourier transform.
+    \item \textbf{Grover's Search Algorithm:} Offers quadratic speedup for unstructured search. Based on amplitude amplification using an oracle \(U_f\) that marks solutions.
+    \item \textbf{Shor's Factoring Algorithm:} Factorizes large integers exponentially faster than known classical algorithms. Relies on phase estimation to find the period of a function for integer factorization.
+    \item \textbf{Variational Quantum Algorithms (VQA):} Such as VQE (Variational Quantum Eigensolver) and QAOA (Quantum Approximate Optimization Algorithm), harness hybrid quantum-classical loops to optimize parameters.
+    \item \textbf{Error Mitigation and Noise:} Real quantum devices are noisy, so practical implementations often include error-correction or near-term approaches with partial error mitigation.
+\end{itemize}
+
+\newpage
+\subsection{Practice Problems and Solutions}
+
+\paragraph{Problem 1:} If \( |\psi\rangle = \alpha |0\rangle + \beta |1\rangle \), what is \( \langle \psi | \psi \rangle \)?
+
+\paragraph{Solution:}
+\begin{align*}
+\langle \psi | \psi \rangle &= (\alpha^* \langle 0| + \beta^* \langle 1|)(\alpha |0\rangle + \beta |1\rangle) \\
+&= |\alpha|^2 \langle 0|0\rangle + \alpha^*\beta \langle 0|1\rangle + \beta^*\alpha \langle 1|0\rangle + |\beta|^2 \langle 1|1\rangle \\
+&= |\alpha|^2 + |\beta|^2 = 1
+\end{align*}
+where the last equality follows from normalization.
+
+\paragraph{Problem 2:} If
+\[
+|\psi\rangle = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ i \end{pmatrix}, \quad
+|\phi\rangle = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -i \end{pmatrix}
+\]
+what is \( |\phi\rangle \langle\psi| \)?
+
+\paragraph{Solution:}
+\begin{align*}
+|\phi\rangle \langle\psi| &= \frac{1}{2} \begin{pmatrix} 1 \\ -i \end{pmatrix} \begin{pmatrix} 1 & -i \end{pmatrix} \\
+&= \frac{1}{2} \begin{pmatrix} 1 & -i \\ -i & -1 \end{pmatrix}
+\end{align*}
+
+\paragraph{Problem 3:} For the Pauli operator \( Y \) matrix element computation:
+
+\paragraph{Solution:}
+The upper left matrix element would be \( \langle 0|Y|0\rangle \). This is zero because \( Y = -i|0\rangle\langle 1| + i|1\rangle\langle 0| \), and when we compute \( \langle 0|Y|0\rangle \), both terms give zero due to orthogonality of the basis states.
+
+\paragraph{Problem 4:} The Pauli operator \( Y \) in outer product form:
+
+\paragraph{Solution:}
+\[
+Y = -i|0\rangle\langle 1| + i|1\rangle\langle 0|
+\]
+
+\paragraph{Problem 5:} For the Pauli \( X \) gate and the states \( |\pm\rangle \):
+
+\paragraph{Solution:}
+\begin{align*}
+\langle + | X | + \rangle &= 1 \\
+\langle + | X | - \rangle &= 0 \\
+\langle - | X | - \rangle &= -1
+\end{align*}
+A good way to solve this is to remember that \( | - \rangle,| + \rangle \) are eigenstates of the \( X \) operator so their outputs from the \( X \) will be scalar multiples of themselves. And if you recall \( | - \rangle,| + \rangle \) are orthogonal so the inner product of \( \langle + | - \rangle \) is zero. In the same vein \( \langle + | + \rangle \) is one. When you apply \( X \) to \( | - \rangle \) you get \( (-1*| - \rangle) \)
+
+\paragraph{Problem 6:} Matrix representation of \( |0\rangle \otimes |1\rangle \):
+
+\paragraph{Solution:}
+\[
+|0\rangle \otimes |1\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \otimes \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \begin{pmatrix} 1 \begin{pmatrix} 0 \\ 1 \end{pmatrix} \\ 0 \begin{pmatrix} 0 \\ 1 \end{pmatrix} \end{pmatrix} = \begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \end{pmatrix}
+\]
+
+\paragraph{Problem 7:} Eigenvalues of the Pauli \( X \) gate in the "plus-minus" basis:
+
+\paragraph{Solution:}
+In the plus-minus basis, the eigenvalues are \( +1 \) and \( -1 \), corresponding to the eigenstates \( |+\rangle \) and \( |-\rangle \) respectively.
+
+\subsection{Key Takeaways}
+\begin{conceptbox}
+\begin{itemize}
+    \item Quantum states must be normalized: \( \langle \psi | \psi \rangle = 1 \)
+    \item Pauli matrices are both unitary and Hermitian
+    \item The computational basis \( \{|0\rangle, |1\rangle\} \) is fundamental
+    \item Tensor products are crucial for multi-qubit systems
+    \item The plus-minus basis \( \{|+\rangle, |-\rangle\} \) diagonalizes the \( X \) gate
+    \item Matrix elements can be computed using both matrix and outer product forms
+\end{itemize}
+\end{conceptbox}
 
 \end{document}
