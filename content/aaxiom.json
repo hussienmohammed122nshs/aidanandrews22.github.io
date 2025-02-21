@@ -5,7 +5,8 @@
     "description": "The app allows students to create course maps, track graduation readiness, and meet nuanced academic requirements using a rule-enforcing scheduler. Users can see their status on every single degree requirement to determine graduation readiness. Personalized course recommendations via an LLM, reorganizes plans to resolve unmet requirements, and prevents invalid scheduling (e.g., prerequisite violations, time conflicts, restrictions). The app integrates institutional course data, displays insights like average GPA, and supports exporting schedules (google sheets) to share with advisors.",
     "link": "https://www.illiniplan.com/",
     "githubLink": "https://github.com/aidanandrews22/IlliniPlan",
-    "demoLink": "https://youtu.be/fqRqdyT98xw"
+    "demoLink": "https://youtu.be/fqRqdyT98xw",
+    "tags": ["AI", "Education", "Web App"]
   },
   {
     "id": "illini-spots",
@@ -13,7 +14,8 @@
     "description": "Shows all buildings on campus with room availability. Users can favorite buildings and comment.",
     "link": null,
     "githubLink": "https://github.com/aidanandrews22/IlliniSpots",
-    "demoLink": "https://youtu.be/9nyc0nOVd4U"
+    "demoLink": "https://youtu.be/9nyc0nOVd4U",
+    "tags": ["Social", "Education", "IOS App"]
   },
   {
     "id": "nvralone",
@@ -21,6 +23,7 @@
     "description": "Mental health awareness brand. Previously $10k/month revenue. Raised thousands for suicide awareness",
     "link": "https://urnvralone.com/",
     "githubLink": null,
-    "demoLink": null
+    "demoLink": null,
+    "tags": ["Social Impact", "E-commerce"]
   }
 ]
