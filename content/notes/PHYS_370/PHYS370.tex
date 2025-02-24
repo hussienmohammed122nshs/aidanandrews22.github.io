@@ -1496,18 +1496,14 @@ In the plus-minus basis, the eigenvalues are \( +1 \) and \( -1 \), correspondin
 \end{itemize}
 \end{conceptbox}
 
-% -------------------------------------------
-% Append this new section before \end{document}
 \newpage
-\section{Lecture 10: Additional Exercises}
-\label{sec:exercise}
-
+\section{Lecture 10: Actions on Operators}
 In the exercises you will show that the eigenvalues of \(\mathbf{B}\) are \(\{0, 3, 3\}\) so that
 \[
 \sum \lambda_i = 0 + 3 + 3 = 6 = \operatorname{Tr}(B).
 \]
 
-\subsection*{Example 3.11}
+\subsubsection{Example 3.11}
 Prove that
 \[
 \mathrm{Tr}\bigl(A \lvert\phi\rangle\langle\psi\rvert \bigr) \;=\; \langle\psi \lvert A \lvert\phi\rangle.
@@ -1523,13 +1519,13 @@ Using an arbitrary basis, we have
 \]
 To obtain the result, we used the fact that inner products are just numbers (so we can rearrange them), and the completeness relation \(\sum_i |u_i\rangle \langle u_i| = I\).
 
-\subsection*{The Expectation Value of an Operator}
+\subsection{The Expectation Value of an Operator}
 The expectation value of an operator is the mean or average value of that operator with respect to a given quantum state. Symbolically,
 \[
 \langle A \rangle \;=\; \langle \psi \lvert A \lvert \psi \rangle. \quad (3.39)
 \]
 
-\subsection*{Example 3.12}
+\subsubsection{Example 3.12}
 A quantum system is in the state
 \[
 \lvert\psi\rangle \;=\; \frac{1}{\sqrt{3}}\,\lvert 0\rangle \;+\; \frac{2}{\sqrt{3}}\,\lvert 1\rangle.
@@ -1552,13 +1548,13 @@ Then
 \]
 Expanding and using \(\langle 0\vert 1\rangle=0, \langle 1\vert 0\rangle=0,\) we find its numerical value. (Omitted here for brevity, but you would continue with the matrix elements to arrive at the expectation.)
 
-\subsection*{Higher Moments and Standard Deviation}
+\subsection{Higher Moments and Standard Deviation}
 We can compute higher moments like \(\langle A^2\rangle\), allowing us to calculate the standard deviation or uncertainty:
 \[
 \Delta A \;=\; \sqrt{\langle A^2\rangle \;-\; \langle A\rangle^2}.
 \]
 
-\subsection*{Example 3.13 (Qutrit Basis)}
+\subsubsection{Example 3.13 (Qutrit Basis)}
 An operator acts on the qutrit basis \(\{\lvert 0\rangle, \lvert 1\rangle, \lvert 2\rangle \}\) as follows:
 \[
 A\lvert 0\rangle = \lvert 1\rangle, \quad
@@ -1574,7 +1570,7 @@ Find \(\langle A \rangle\) for the state
 \]
 (Here you expand \(A\lvert\psi\rangle\), then compute \(\langle \psi \lvert A \lvert \psi\rangle\) similarly to Example 3.12.)
 
-\subsection*{Functions of Operators}
+\subsection{Functions of Operators}
 A function of an operator \(f(A)\) can be found via its Taylor expansion:
 \[
 f(A) \;=\; \sum_{n=0}^\infty a_n A^n.
@@ -1588,7 +1584,7 @@ then
 f(A) \;=\; \sum_i f(a_i)\,\lvert u_i\rangle \langle u_i\rvert.
 \]
 
-\subsection*{Unitary Transformations}
+\subsection{Unitary Transformations}
 A change of basis from \(\{|u_i\rangle\}\) to \(\{|v_i\rangle\}\) can be done using a and a corresponding unitary \(U\):
 \[
 \lvert \psi_t\rangle \;=\; U \lvert \psi\rangle,
@@ -1596,7 +1592,7 @@ A change of basis from \(\{|u_i\rangle\}\) to \(\{|v_i\rangle\}\) can be done us
 A_t \;=\; U\,A\,U^\dagger.
 \]
 
-\subsection*{Projection Operators}
+\subsection{Projection Operators}
 A projection operator
 \[
 P \;=\; \lvert \psi\rangle \langle \psi\rvert
@@ -1610,10 +1606,10 @@ projecting onto the subspace spanned by \(\lvert 1\rangle, \dots, \lvert m\rangl
 Z = \lvert 0\rangle\langle 0\rvert \;-\; \lvert 1\rangle\langle 1\rvert.
 \]
 
-\subsection*{Positive Operators and POVMs}
+\subsection{Positive Operators and POVMs}
 An operator \(A\) is positive semidefinite if \(\langle \psi \lvert A \lvert \psi\rangle \ge 0\) for all \(\lvert \psi\rangle\). A POVM (Positive Operator-Valued Measure) is a set of such positive operators \(\{E_i\}\) summing to the identity.
 
-\subsection*{Commutator Algebra}
+\subsection{Commutator Algebra}
 \[
 [A,B] \;=\; A\,B \;-\; B\,A, 
 \quad
@@ -1621,6 +1617,4 @@ An operator \(A\) is positive semidefinite if \(\langle \psi \lvert A \lvert \ps
 \]
 Commuting operators can be simultaneously diagonalized, while noncommuting operators are said to be incompatible.
 
-% -------------------------------------------
-% end of the new section, file continues
 \end{document}
