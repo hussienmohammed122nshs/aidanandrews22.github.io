@@ -3,32 +3,36 @@
     "id": "apps",
     "title": "IlliniSpots & IlliniPlan.com: Two Apps for Students",
     "date": "2025-01-20",
-    "category": "Apps",
+    "tags": "Apps",
     "summary": "I build two apps for UIUC students. IlliniSpots is a platform for users to find, rate, and review study spots on campus. IlliniPlan is a platform for users to plan their classes and schedule.",
-    "content": "content/posts/apps.md"
+    "content": "content/posts/apps.md",
+    "type": "md"
   },
   {
     "id": "ml130824",
     "title": "Optimizing Natural Language Processing Systems: Advanced RAG and Intent Classification",
     "date": "2024-08-13",
-    "category": "ML",
+    "tags": "ML",
     "summary": "This paper presents cutting-edge techniques for enhancing Natural Language Processing (NLP) systems, focusing on two critical areas: Retrieval-Augmented Generation (RAG) and intent classification. We introduce a novel \"wavular\" RAG approach that significantly improves retrieval efficiency, and a hybrid embedding-based classification system optimized for limited datasets. Our methods demonstrate substantial improvements in computational efficiency and classification accuracy, addressing key challenges in modern NLP applications. This research is particularly relevant for scenarios with constrained computational resources or limited training data, offering innovative solutions to enhance NLP system performance across various domains. Keywords: Natural Language Processing, Retrieval-Augmented Generation, Intent Classification, Semantic Search, Embedding-Based Classification",
-    "content": "content/posts/ml130824.md"
+    "content": "content/posts/ml130824.md",
+    "type": "md"
   },
   {
     "id": "phys140424",
     "title": "What happened to the study of physics?",
     "date": "2024-04-14",
-    "category": "Physics",
+    "tags": "Physics",
     "summary": "I am writing about not only the decline of physics but the decline in overall quality and quantity of research. It seems like no undergraduate students are interested in pursuing graduate degrees.",
-    "content": "content/posts/phys140424.md"
+    "content": "content/posts/phys140424.md",
+    "type": "md"
   },
   {
     "id": "misc040424",
     "title": "Research Based Paper For RHET 105",
     "date": "2024-04-04",
-    "category": "Misc",
+    "tags": "Misc",
     "summary": "I would have never thought that I would take pride in a paper written for a general education requirement class...",
-    "content": "content/posts/misc040424.md"
+    "content": "content/posts/misc040424.md",
+    "type": "md"
   }
 ]
