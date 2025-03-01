@@ -3,3 +3,5 @@ While building the Voxed app I stumbled upon a rather daunting task. I needed a 
 ## Embedded images
 
 Often times (especially in education), documents have embedded visuals and diagrams making ingestion difficult.
+[https://aidanandrews22.github.io/content/images/extraction/img1.png]
+[https://aidanandrews22.github.io/content/images/extraction/img2.png]
