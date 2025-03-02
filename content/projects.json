@@ -64,6 +64,14 @@
     "tags": ["AI & Machine Learning", "LLMs"]
   },
   {
+    "id": "web-navigation-assistant",
+    "title": "Chrome Extension fo navigating complex websites",
+    "description": "Provides detailed instructions on how to navigate current website given prompt. Example \"How do i access my build yml in aws amplify?\". Works on any chromium or chrome based browser",
+    "demoLink": null,
+    "githubLink": "https://github.com/aidanandrews22/web-navigation-assistant",
+    "tags": ["AI & Machine Learning", "LLMs"]
+  },
+  {
     "id": "nvralone",
     "title": "NVRALONE",
     "description": "I made this entire website, with the help of Shopify templates. The bulk of my work was spent on customer acquisition algorithms, marketing, managing, and designing.",
