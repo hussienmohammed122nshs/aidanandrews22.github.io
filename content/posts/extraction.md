@@ -9,6 +9,35 @@ But enough rambling let's actually explore the solution...
 
 ---
 
+## LLMs suck at un-structured -> structured data
+
+The biggest mistake you can make in content extraction from documents is underengineering your system and relying on **LLMs** to take care of everything for you.
+
+> ### Why this is so bad
+> 1. LLMs are not deterministic
+>   >   - No matter what you set temperature to by nature LLMs will generate a probability distribution and select responses stochastically
+> 2. Halucination
+>   >   - Although flagship models claim there is low halucination, vision tasks remain overrun by halucination. 
+>   >   - In most workflows halucination can make or break the user experience or even your entire app
+> 3. They are just flat out not that good at content extraction in un-structure to structured formats
+
+What you should really do in most situations is create a custom scraper that is hyperspecific to your use case. *Unless you are building a general system to accept all document varieties, then a hybrid approach is better*
+
+---
+### Un-structured text based pdf ingestion
+---
+When building my degree audit extractor for [IlliniPlan](https://www.illiniplan.com/) I tried to just pass the pdf to the LLM and have it extract the structure of the pdf as json but this **literally** never worked once.
+
+The LLMs output would vary every single time, and it overreasoned the structure.
+
+#### The optimal solution
+I converted the pdf to xml which made the content really really structured which was perfect for my task. Then I used standardized scraping to convert it into json. And finally, passed it to a small LLM to verify the output.
+
+This allowed me to go from this:
+![degree audit img](https://aidanandrews22.github.io/content/images/extraction/my_audit.png)
+
+---
+
 ## 🖼️ Embedded images
 
 Often times (especially in education), documents have embedded visuals and diagrams making ingestion difficult.
@@ -154,7 +183,6 @@ Recognition, CVPR 2016 (Best Paper)
 ```
 
 </details>
-
 
 ---
 
