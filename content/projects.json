@@ -21,7 +21,7 @@
     "description": "Shows all buildings on campus with room availability. Users can favorite buildings and comment.",
     "demoLink": null,
     "githubLink": "https://github.com/aidanandrews22/IlliniSpots",
-    "tags": ["Swift, React Native", "Postgres, Firebase", "Search"]
+    "tags": ["App Dev", "Postgres, Firebase", "Search"]
   },
   {
     "id": "devanagari-web-app",
@@ -54,6 +54,14 @@
     "demoLink": "https://uiuc.chat/cropwizard-1.5/chat",
     "githubLink": "https://github.com/aidanandrews22/CropWizard-Tools",
     "tags": ["AI & Machine Learning", "LLMs"]
+  },
+  {
+    "id": "guideme",
+    "title": "GuideMe",
+    "description": "This is a Macos app that allows users to directly speak with a chatbot with their computer screen as context. It was originally designed to help people with navigation, but I ended up using it for all sorts of tasks.",
+    "demoLink": null,
+    "githubLink": "https://github.com/aidanandrews22/GuideMe",
+    "tags": ["LLMs", "App Dev"]
   },
   {
     "id": "research-agent",
