@@ -61,5 +61,14 @@
     "summary": "There are only two types of developers in this world...",
     "content": "content/posts/misc030425.md",
     "type": "md"
+  },
+  {
+    "id": "lossfunc",
+    "title": "Examining loss functions for simple ML",
+    "date": "2025-02-28",
+    "tags": ["ML"],
+    "summary": "Recently I got grilled in an interview about loss functions for simple ML models so I thought it would be a good idea to write about it...",
+    "content": "content/posts/lossfunc.md",
+    "type": "md"
   }
 ]
