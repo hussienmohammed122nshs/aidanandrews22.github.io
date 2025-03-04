@@ -1,3 +1,4 @@
+**IN PROGRESS**
 # 📄 Document Extraction for RAG Systems
 > *Solving the challenge of extracting meaningful content from diverse file formats*
 
@@ -35,6 +36,13 @@ I converted the pdf to xml which made the content really really structured which
 
 This allowed me to go from this:
 ![degree audit img](https://aidanandrews22.github.io/content/images/extraction/my_audit.png)
+
+<details>
+<summary><b>To this:</b></summary>
+
+```
+
+```
 
 ---
 

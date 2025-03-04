@@ -52,5 +52,14 @@
     "summary": "These are the notes I take in class.",
     "content": "content/notes/PHYS_370/PHYS370.pdf",
     "type": "pdf"
+  },
+  {
+    "id": "misc030425",
+    "title": "Engineer vs Planner",
+    "date": "2025-03-04",
+    "tags": ["Misc"],
+    "summary": "There are only two types of developers in this world...",
+    "content": "content/posts/misc030425.md",
+    "type": "md"
   }
 ]
