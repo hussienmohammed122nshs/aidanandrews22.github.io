@@ -1,1 +1,3 @@
+Developing an all in one app for studying
+
 More details coming soon...
