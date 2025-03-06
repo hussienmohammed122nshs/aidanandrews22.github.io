@@ -1,3 +1,3 @@
-Developing an all in one app for studying
+# [voxed.ai](https://voxed.ai/)
 
-More details coming soon...
+Developing an all in one app for studying
