@@ -137,8 +137,8 @@ loop {
 
 1. **Linear Regression Fit**
    ![Linear Regression](/assets/Project/climatepredict/linear_regression.png)
-   
 2. **Polynomial Regression Curve**
+
    - Visualization of the polynomial fit for nonlinear relationships.
 
 3. **Random Forest Predictions**
@@ -163,6 +163,7 @@ loop {
 ---
 
 ### Datasets
+
 **Carbon Emission Datasets:** \
 Dataset 1: https://www.kaggle.com/datasets/patricklford/global-co-emissions \
 Dataset 2: https://www.kaggle.com/datasets/soheiltehranipour/co2-dataset-in-usa \
@@ -172,4 +173,4 @@ Dataset 1: https://climate.nasa.gov/vital-signs/global-temperature/?intent=121 \
 Dataset 2: https://www.kaggle.com/code/ash316/is-the-mercury-rising/input \
 \
 **Carbon Behavior Dataset:** \
-https://www.kaggle.com/datasets/dumanmesut/individual-carbon-footprint-calculation?resource=download   
+https://www.kaggle.com/datasets/dumanmesut/individual-carbon-footprint-calculation?resource=download

@@ -1,8 +1,5 @@
 # This Website/Repository contains data for my website. **If you are lost go back to:** [aidanandrews.info](https://aidanandrews.info)
 
-
-
-
 ### If instead you are here to see PDF's here are all of them:
 
 **Transcripts:**
@@ -20,4 +17,3 @@
 
 - **[Cover Letter](https://aidanandrews22.github.io/content/pdf/cover-letter.pdf)**  
   _Last updated: 2024-10-08_
-

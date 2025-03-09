@@ -1,55 +1,55 @@
 [
-    {
-      "id": "note1",
-      "title": "Place Holder",
-      "date": "2024-07-26",
-      "category": "Misc",
-      "isPublic": true,
-      "userId": "default_user",
-      "lastEdited": "2024-07-26"
-    },
-    {
-      "id": "note1722368450060",
-      "title": "Hello YouTube I am Working!",
-      "category": "Misc",
-      "date": "2024-07-31",
-      "isPublic": true,
-      "userId": "default_user",
-      "lastEdited": "2024-07-31",
-      "fileType": "markdown",
-      "link": "https://aidanandrews22.github.io/content/notes/note1722368450060.md"
-    },
-    {
-      "id": "note1722403913513",
-      "title": "Multi-language Markdown Sample",
-      "category": "Misc",
-      "date": "2024-07-31",
-      "isPublic": true,
-      "userId": "default_user",
-      "lastEdited": "2024-07-31",
-      "fileType": "markdown",
-      "link": "https://aidanandrews22.github.io/content/notes/note1722403913513.md"
-    },
-    {
-      "id": "PHYS370",
-      "title": "PHYS 370 Notes",
-      "category": "Physics",
-      "date": "2024-01-31",
-      "isPublic": true,
-      "userId": "default_user",
-      "lastEdited": "2024-01-31",
-      "fileType": "pdf",
-      "link": "https://aidanandrews22.github.io/content/notes/PHYS_370/PHYS370.pdf"
-    },
-    {
-      "id": "reflections",
-      "title": "Reflections",
-      "category": "Personal",
-      "date": "2024-01-31",
-      "isPublic": true,
-      "userId": "default_user",
-      "lastEdited": "2024-01-31",
-      "fileType": "pdf",
-      "link": "https://aidanandrews22.github.io/content/notes/Personal/main.pdf"
-    }
+  {
+    "id": "note1",
+    "title": "Place Holder",
+    "date": "2024-07-26",
+    "category": "Misc",
+    "isPublic": true,
+    "userId": "default_user",
+    "lastEdited": "2024-07-26"
+  },
+  {
+    "id": "note1722368450060",
+    "title": "Hello YouTube I am Working!",
+    "category": "Misc",
+    "date": "2024-07-31",
+    "isPublic": true,
+    "userId": "default_user",
+    "lastEdited": "2024-07-31",
+    "fileType": "markdown",
+    "link": "https://aidanandrews22.github.io/content/notes/note1722368450060.md"
+  },
+  {
+    "id": "note1722403913513",
+    "title": "Multi-language Markdown Sample",
+    "category": "Misc",
+    "date": "2024-07-31",
+    "isPublic": true,
+    "userId": "default_user",
+    "lastEdited": "2024-07-31",
+    "fileType": "markdown",
+    "link": "https://aidanandrews22.github.io/content/notes/note1722403913513.md"
+  },
+  {
+    "id": "PHYS370",
+    "title": "PHYS 370 Notes",
+    "category": "Physics",
+    "date": "2024-01-31",
+    "isPublic": true,
+    "userId": "default_user",
+    "lastEdited": "2024-01-31",
+    "fileType": "pdf",
+    "link": "https://aidanandrews22.github.io/content/notes/PHYS_370/PHYS370.pdf"
+  },
+  {
+    "id": "reflections",
+    "title": "Reflections",
+    "category": "Personal",
+    "date": "2024-01-31",
+    "isPublic": true,
+    "userId": "default_user",
+    "lastEdited": "2024-01-31",
+    "fileType": "pdf",
+    "link": "https://aidanandrews22.github.io/content/notes/Personal/main.pdf"
+  }
 ]
