@@ -6,7 +6,7 @@ So I built two apps that will help students study and plan for college. One is a
 
 ### Demo:
 
-[![IlliniPlan Demo](https://img.youtube.com/vi/fqRqdyT98xw/0.jpg)](https://www.youtube.com/watch?v=fqRqdyT98xw)
+![IlliniPlan Demo](https://www.youtube.com/watch?v=_niGGKMig3s)
 
 ## IlliniSpots: [project description](https://www.aidanandrews.info/projects/illini-spots)
 
