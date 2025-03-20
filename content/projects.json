@@ -16,6 +16,14 @@
     "tags": ["React", "Machine Learning", "Algorithms & Data Structures"]
   },
   {
+    "id": "manim-video-agent",
+    "title": "Manim Video Agent",
+    "description": "A high-performance multimodal video generator for educational videos, leveraging AI to create engaging animations with one prompt.",
+    "demoLink": null,
+    "githubLink": "https://github.com/aidanandrews22/manim-video-agent.git",
+    "tags": ["AI & Machine Learning", "LLMs"]
+  },
+  {
     "id": "illini-spots",
     "title": "IlliniSpots: The Instagram of study spots at UIUC",
     "description": "Shows all buildings on campus with room availability. Users can favorite buildings and comment.",
