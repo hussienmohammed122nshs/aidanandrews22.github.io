@@ -70,5 +70,14 @@
     "summary": "Recently I got grilled in an interview about loss functions for simple ML models so I thought it would be a good idea to write about it...",
     "content": "content/posts/lossfunc.md",
     "type": "md"
+  },
+  {
+    "id": "vibecode",
+    "title": "My thoughts on \"vibe coding\" as a 10x engineer and researcher",
+    "date": "2025-03-20",
+    "tags": ["Misc"],
+    "summary": "I don't usually comment on trendy phrases, but this one needs a post...",
+    "content": "content/posts/vibecode.md",
+    "type": "md"
   }
 ]
