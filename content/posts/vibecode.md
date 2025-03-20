@@ -1,4 +1,6 @@
 ## in progress
+> i envision a worl where developers will write 0 lines of code. the paradigm shift will be from programming to engineering. you will still need to be a strong capable engineer, but you will not have to erite codr
+
 So lets discuss the elephant in the room, "vibe coding" has put the internet in a chokehold.
 
 lets start by discussing what the term "vibe coding" even means
@@ -30,4 +32,6 @@ i do absolutely all of my code writing in vim or cursor (with the occasional qui
 alognside an llm i am capable of coding absolutely anything in the world. in total i would say that llm tools give me about 50x more breadth and 3x code writing speed.
 
 my workflow and time splits aee as follows:
-chart: 75% either completely solving the problem or solving most of it; 10% setting up file structure, initializing frameworks, or writing psuedo code; 15% rode mapping and prompting
+chart: 75% either completely solving the problem or solving most of it; 10% setting up file structure, initializing dbs/frameworks, or writing psuedo code; 15% rode mapping and prompting
+
+roadmapping and prompting is the most overlooked and highest roi step. Granted that it implicitly requires step 1 to be complete. But if you can understand how the problem should be solved and what information is required to solve it than you will see huge returns.
