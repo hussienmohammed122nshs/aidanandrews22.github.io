@@ -23,4 +23,11 @@ these problems would all not arise if the person prompting and coding alongside 
 as a current researcher and experienced developer i can say wholeheartedly that the future involves the elimination of the need to learnhow to code.
 when i say code i mean strictly programming: syntax, language, and literal code writing
 i believe developers should be language agnostic and only have to write pseudo code.
-i mean think about technical interviews they typically have you write pseudo code and explain your thought process. because they realize those are the qualities that make a real engineer. not whether they have the docu
+i mean think about technical interviews they typically have you write pseudo code and explain your thought process. because they realize those are the qualities that make a real engineer. not whether you have memorized the codumentation for a framework, library, or language.
+
+## how i use these tools
+i do absolutely all of my code writing in vim or cursor (with the occasional quick nano edit). i have not hit any of the bariers or limitations that i just discussed.
+alognside an llm i am capable of coding absolutely anything in the world. in total i would say that llm tools give me about 50x more breadth and 3x code writing speed.
+
+my workflow and time splits aee as follows:
+chart: 75% either completely solving the problem or solving most of it; 10% setting up file structure, initializing frameworks, or writing psuedo code; 15% rode mapping and prompting
