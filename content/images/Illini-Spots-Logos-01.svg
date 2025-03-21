@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 1024">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff5f05;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-family: Montserrat-Black, Montserrat;
+        font-size: 93.8px;
+        font-weight: 800;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" width="1024" height="1024"/>
+  <text class="cls-2" transform="translate(184.18 931.86)"><tspan x="0" y="0">ILLINI SP</tspan><tspan class="cls-3" x="449.11" y="0">O</tspan><tspan x="527.72" y="0">TS</tspan></text>
+  <image width="243" height="351" transform="translate(274.56 94.29) scale(1.95)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPUAAAFiCAYAAAAupZ4qAAAACXBIWXMAAAWwAAAFsAFAmUYlAAAIMklEQVR4nO3af6iddQHH8e+znbt299vLxS1NRwNBySESreJKDSEtSAWJ/onMC0bSCCy0HAm7C2OFFIMhGERbv/4oKjAFyaTm4IKNRHBzKRvTO5lucruyrW22LU5/NONiVN7jOfseP+f1gvPnl/P55815nvM8pQBRmna7PVF7BNAVO5um2dkqpWyqvQTomp3zai8AukvUEEbUEEbUEEbUEEbUEEbUEEbUEEbUEEbUEEbUEKbV6cG9zx8sx46f7OYW4LyxdWs7Pttx1ON3bZl68dCrqzv+ZuC/mt73aMdnXX5DGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDGFFDmFanBzeM37rkhQOHpro5plee2bt/3rP7DoyeOXtuuPYW6nj/5e+dWnftVa1lSxafq73l/xkamr+wlLKy0/NNu91ud3FPX5vcvads2fazI089/dyq2lvovRXLlhzbdPf4gptvvG54+dLFtedcCJubppkYqKjfNLl7T/nyvd+bPnxkerT2FrpvqNU6dd9Xb5u3YfzWhbW3XGCbm6aZGMh76rF1a8uuhx8cvemGsZnaW+iuS1eNTv/+l99fNIBB/9tARl1KKcuXLi7bt24cEXaOyy65eGbXww+OXn3lmtpTqhrYqN+0fevGkbF1a6dr7+CdWTDUOv3wj7eMDMi98/808FGXUspPtt03umDB0Bu1d9C5HzxwT/vySzv+wziKqMu/LsW/e9+dA/eHYYqrrlh99KYbxhbV3tEvRH3e5z9z4/CypYtfr72DufvON+/0Ez2LqGe5+Yaxf9TewNwsW7r49bF1a2vP6CuinuWOz33ac+t3mU9d/+FTtTf0G1HPMuiPQt6NPvLBD4zU3tBvRP0Wqy4eOVp7A2/fmssv8T7/W7RKKU/WHtEjK0op18z10PDC93i0lW+qlPJS7RE98FIppbSapllfd0dvtNvt9aWUP9beQV/a0TTNRO0RveLyG8KIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsKIGsK02u32ztojemRF7QH0rdvb7fb62iN6YEfTNDtapZSP117ST06/8feFtTfQc6vPf9LsLMXl93848trMytobePsOHnrldO0N/UbUs+x9/mDtCczRU08/N1N7Q78R9Sw//Pmj07U3MDeP/eFPi2pv6DeinuW3j0/Or72BuTl+4uRFk7v31J7RV0R93k9/9bvTx0+cvKj2Dubu3m8/dLT2hn4i6lLKsRMnyzfuf6ipvYPO/GX/1MpHHp88VXtHvxB1KeW2r9w/febMWY+y3sW+dM8DzaHDfrBLEXUZv2vLzOTuPaO1d/DOnDl7bviWL2ycOXbiZO0p1Q101ON3bZl55PHJkdo76I6XX3lt5GO3bJge9EeTAxn15O495Zrrb58WdJ7DR6ZHP/HZr516cPtv3qi9pZam3W63a4+4UCZ37ynbfvTrl5/Y9efLam+h91YsW3Js093jC26+8brh5UsX155zIWxummai46h3/OKxv75w4NDfur2qF57Zu3/es/sOjJ45e2649hbquGLN+w6v/+i152rveDuGhuYv/NbX7+jkdeV3FvWHPvnFqRcPvZr4UjxUN73v0U6ObW6aZmIg76khmaghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghjKghTKvTg9u3blx97PjJbm4BuqDjqK++ck03dwBd4vIbwogawogawogawogawogawogawogawogawogawogawrRKKU/WHgF0xUu1BwA98E+uKCEGzDjRWQAAAABJRU5ErkJggg=="/>
+</svg>
