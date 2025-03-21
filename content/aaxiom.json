@@ -6,6 +6,7 @@
     "link": "https://www.illiniplan.com/",
     "githubLink": "https://github.com/aidanandrews22/IlliniPlan",
     "demoLink": "https://youtu.be/_niGGKMig3s",
+    "logo": "https://www.illiniplan.com/Illini-Plan-Logos-01.svg",
     "tags": ["AI", "Education", "Web App"]
   },
   {
@@ -15,6 +16,7 @@
     "link": null,
     "githubLink": "https://github.com/aidanandrews22/IlliniSpots",
     "demoLink": "https://youtu.be/9nyc0nOVd4U",
+    "logo": "https://www.aidanandrews22.github.io/content/images/Illini-Spots-Logos-01.svg",
     "tags": ["Social", "Education", "IOS App"]
   },
   {
@@ -24,6 +26,7 @@
     "link": "https://urnvralone.com/",
     "githubLink": null,
     "demoLink": null,
+    "logo": "https://urnvralone.com/cdn/shop/files/logo_white.png?v=1684097102&width=110",
     "tags": ["Social Impact", "E-commerce"]
   },
   {
@@ -33,6 +36,7 @@
     "link": "https://voxed.ai/",
     "githubLink": "https://github.com/orgs/VoxedAi/repositories",
     "demoLink": null,
+    "logo": "https://www.voxed.ai/voxed-icon.png",
     "tags": ["AI", "LLMs"]
   }
 ]
