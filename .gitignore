@@ -10,3 +10,4 @@
 **/*.blg
 **/*.run.xml
 **/*.auxlock
+**/*.DS_Store
