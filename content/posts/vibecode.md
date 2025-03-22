@@ -9,8 +9,8 @@ So let's discuss the elephant in the room, "vibe coding" has put the internet in
 ### What is "Vibe Coding"?
 
 > Vibe coding is an AI-dependent programming technique where a person describes a problem in a few sentences as a prompt to a large language model (LLM) tuned for coding. The LLM generates software, shifting the programmer's role from manual coding to guiding, testing, and refining the AI-generated source code.
-> 
-> *Source: https://en.m.wikipedia.org/wiki/Vibe_coding*
+>
+> _Source: https://en.m.wikipedia.org/wiki/Vibe_coding_
 
 At face value it seems we have come to some paradigm shift in programming where users need no competency in CS or programming to achieve results. However, I think this is wildly naive. I want to preface by saying I am the antithesis of an AI doomer but yet I am not on a nonsensical hype train either.
 
