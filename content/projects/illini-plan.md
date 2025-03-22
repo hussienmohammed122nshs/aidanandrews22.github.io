@@ -1,4 +1,4 @@
-**Note:** This project will be open-sourced once the first MVP is complete.
+# [IlliniPlan.com](https://www.illiniplan.com/)
 
 ## Motivation
 
