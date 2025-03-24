@@ -12,7 +12,7 @@
   {
     "id": "illini-plan",
     "title": "IlliniPlan: AI Powered Class Planner",
-    "description": "IlliniPlan helps students plan courses, track graduation progress, and meet academic requirements with a smart, rule-based scheduler. It offers personalized course recommendations, resolves unmet requirements, prevents invalid plans, and integrates institutional data with insights like average GPA. Schedules can be exported and shared with advisors.",
+    "description": "IlliniPlan helps students plan courses, track graduation progress, and meet academic requirements with a smart, rule-based scheduler. Offering personalized course recommendations, resolves unmet requirements, prevents invalid plans, and integrates institutional data with insights like average GPA. Schedules can be exported and shared with advisors.",
     "link": "https://www.illiniplan.com/",
     "githubLink": "https://github.com/aidanandrews22/IlliniPlan",
     "demoLink": "https://youtu.be/_niGGKMig3s",
