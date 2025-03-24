@@ -20,16 +20,6 @@
     "tags": ["AI", "Education", "Web App"]
   },
   {
-    "id": "illini-spots",
-    "title": "IlliniSpots: The Instagram of study spots at UIUC",
-    "description": "Shows all buildings on campus with room availability. Users can favorite buildings and comment.",
-    "link": null,
-    "githubLink": "https://github.com/aidanandrews22/IlliniSpots",
-    "demoLink": "https://youtu.be/9nyc0nOVd4U",
-    "logo": "https://aidanandrews22.github.io/content/images/Illini-Spots-Logos-01.svg",
-    "tags": ["Social", "Education", "IOS App"]
-  },
-  {
     "id": "nvralone",
     "title": "NVRALONE",
     "description": "Mental health awareness brand. Previously $10k/month revenue. Raised thousands for suicide awareness",
@@ -38,5 +28,15 @@
     "demoLink": null,
     "logo": "https://aidanandrews22.github.io/content/images/nvralone.jpg",
     "tags": ["Social Impact", "E-commerce"]
+  },
+  {
+    "id": "illini-spots",
+    "title": "IlliniSpots: The Instagram of study spots at UIUC",
+    "description": "Shows all buildings on campus with room availability. Users can favorite buildings and comment.",
+    "link": null,
+    "githubLink": "https://github.com/aidanandrews22/IlliniSpots",
+    "demoLink": "https://youtu.be/9nyc0nOVd4U",
+    "logo": "https://aidanandrews22.github.io/content/images/Illini-Spots-Logos-01.svg",
+    "tags": ["Social", "Education", "IOS App"]
   }
 ]
