@@ -1,8 +1,8 @@
 [
   {
     "id": "voxed",
-    "title": "Voxed: AI Powered Learning Assistant",
-    "description": "This app allows users to create a structured db and chat interface to help them learn and interact with their own data. Originally built for students to store lecture videos and class docs and interact with them via llm.",
+    "title": "Voxed: Your Second Brain",
+    "description": "Knowledge and research assistant and agent.",
     "demoLink": "https://voxed.ai/",
     "githubLink": "https://github.com/orgs/VoxedAi/repositories",
     "tags": ["React", "Machine Learning", "AI", "LLMs"]
