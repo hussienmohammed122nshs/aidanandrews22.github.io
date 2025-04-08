@@ -32,7 +32,7 @@ I believe developers should be language agnostic and only have to write pseudo c
 
 ## How I Use These Tools
 
-I do absolutely all of my code writing in Vim or Cursor (with the occasional quick Nano edit). I have not hit any of the barriers or limitations that I just discussed. Alongside an LLM I am capable of coding absolutely anything in the world. In total I would say that LLM tools give me about **50x more breadth** and **3x code writing speed**.
+I do absolutely all of my code writing in Vim or Cursor (with the occasional quick Nano edit). I have not hit any of the barriers or limitations that I just discussed. Alongside an LLM I am capable of coding absolutely anything in the world. In total I would say that LLM tools give me about **50x more breadth** and **4x code writing speed**.
 
 ### My Workflow Time Splits
 
