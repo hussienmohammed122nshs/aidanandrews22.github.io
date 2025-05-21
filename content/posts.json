@@ -3,7 +3,7 @@
     "id": "math495",
     "title": "MATHEMATICAL MODELING OF REINFORCEMENT LEARNING IN MULTI-AGENT SYSTEMS",
     "date": "2025-05-20",
-    "tags": ["School", "Math", "RL"],
+    "tags": ["School", "Math", "RL",  ],
     "summary": "This is the research paper I wrote as my final project for Math 495.",
     "content": "content/pdf/Aidan_Andrews_MATH495_Final.pdf",
     "type": "pdf"
@@ -30,7 +30,7 @@
     "id": "ml130824",
     "title": "Optimizing Natural Language Processing Systems: Advanced RAG and Intent Classification",
     "date": "2024-08-13",
-    "tags": ["ML"],
+    "tags": ["ML", "Pub"],
     "summary": "This paper presents cutting-edge techniques for enhancing Natural Language Processing (NLP) systems, focusing on two critical areas: Retrieval-Augmented Generation (RAG) and intent classification. We introduce a novel \"wavular\" RAG approach that significantly improves retrieval efficiency, and a hybrid embedding-based classification system optimized for limited datasets. Our methods demonstrate substantial improvements in computational efficiency and classification accuracy, addressing key challenges in modern NLP applications. This research is particularly relevant for scenarios with constrained computational resources or limited training data, offering innovative solutions to enhance NLP system performance across various domains. Keywords: Natural Language Processing, Retrieval-Augmented Generation, Intent Classification, Semantic Search, Embedding-Based Classification",
     "content": "content/posts/ml130824.md",
     "type": "md"
