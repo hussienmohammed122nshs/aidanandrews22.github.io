@@ -10,7 +10,7 @@
   },
   {
     "id": "extraction",
-    "title": "From Raw Data to Meaningful Context: Optimizing File Extraction for RAG and LLM Systems",
+    "title": "From from  Raw Data to Meaningful Context: Optimizing File Extraction for RAG and LLM Systems",
     "date": "2025-03-01",
     "tags": ["AI", "RAG", "LLM"],
     "summary": "Exploring the challenges of extracting meaningful context from raw data and optimizing file extraction for RAG and LLM systems. Specifically used for Voxed.",
